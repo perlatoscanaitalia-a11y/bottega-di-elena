@@ -5,13 +5,13 @@ import ElenaCta from '../components/ElenaCta.astro';
 import SpecialtyCard from '../components/SpecialtyCard.astro';
 import { categories, selectedSpecialties, site } from '../data/site';
 ---
-<BaseLayout title="ELENA – Bottega dei Sapori Toscani | Bottega alimentare a Firenze" description="Pane fresco del Forno Coverciano, gastronomia, salumi, formaggi, frutta e verdura di stagione e vini sfusi in Via Masaccio a Firenze.">
+<BaseLayout title="PANIFICIO ELENA – Bottega dei Sapori Toscani | Bottega alimentare a Firenze" description="Pane fresco del Forno Coverciano, gastronomia, salumi, formaggi, frutta e verdura di stagione e vini sfusi in Via Masaccio a Firenze.">
   <Hero eyebrow="Bottega alimentare · Firenze" title="Cose buone, scelte per il loro sapore." text="Pane fresco del Forno Coverciano, gastronomia, salumi e formaggi, frutta e verdura di stagione e vini sfusi. Una bottega vera, in Via Masaccio.">
     <div slot="actions" class="hero-actions"><a class="button" href="/dove-siamo/">Vieni a trovarci</a><a class="text-link" href="/prodotti/">Scopri i prodotti <span aria-hidden="true">→</span></a></div>
   </Hero>
   <section class="intro-band"><div class="shell band-grid"><p class="quote">“La frutta bella si trova facilmente. Quella buona un po’ meno.”</p><p>Seguiamo stagioni e disponibilità. Quando possibile scegliamo verdure locali, spesso direttamente da contadini, senza promettere ciò che la natura non può mantenere.</p></div></section>
   <section class="specialties-preview section shell">
-    <div class="section-heading"><div><p class="eyebrow">Specialità al banco</p><h2>Premiati. Scelti da ELENA.</h2></div><p>Ci sono prodotti buoni. E poi ci sono quelli che si fanno ricordare. Li abbiamo scelti per il gusto, e qualcuno se n’è accorto anche prima di noi.</p></div>
+    <div class="section-heading"><div><p class="eyebrow">Specialità al banco</p><h2>Premiati. Scelti da PANIFICIO ELENA.</h2></div><p>Ci sono prodotti buoni. E poi ci sono quelli che si fanno ricordare. Li abbiamo scelti per il gusto, e qualcuno se n’è accorto anche prima di noi.</p></div>
     <div class="specialty-grid">{selectedSpecialties.map((product) => <SpecialtyCard product={product} />)}</div>
     <p class="section-link"><a class="button" href="/specialita-scelte/">Tutte le specialità scelte</a></p>
   </section>
@@ -31,8 +31,8 @@ import { categories, selectedSpecialties, site } from '../data/site';
     <div class="section-heading"><div><p class="eyebrow">Servizi di quartiere</p><h2>In bottega c’è anche</h2></div><p>Piccole comodità che trovi insieme alla spesa di ogni giorno.</p></div>
     <div class="service-grid">
       <article><span class="service-number" aria-hidden="true">01</span><h3>Tessera fedeltà</h3><p>Richiedi la tua tessera fedeltà in negozio.</p></article>
-      <article><span class="service-number" aria-hidden="true">02</span><h3>Amazon Hub Counter</h3><p>ELENA è un punto Amazon Hub Counter, dove puoi ritirare i tuoi pacchi Amazon.</p></article>
-      <article><span class="service-number" aria-hidden="true">03</span><h3>Too Good To Go</h3><p>ELENA collabora con Too Good To Go contro lo spreco alimentare.</p></article>
+      <article><span class="service-number" aria-hidden="true">02</span><h3>Amazon Hub Counter</h3><p>PANIFICIO ELENA è un punto Amazon Hub Counter, dove puoi ritirare i tuoi pacchi Amazon.</p></article>
+      <article><span class="service-number" aria-hidden="true">03</span><h3>Too Good To Go</h3><p>PANIFICIO ELENA collabora con Too Good To Go contro lo spreco alimentare.</p></article>
     </div>
   </section>
   <section class="story-split shell"><div class="bread-shape bread-shape-logo"><img src="/images/logo-forno-coverciano.jpg" alt="Logo Il Pane del Forno Coverciano — Il pane come una volta" loading="lazy" decoding="async" /></div><div><p class="eyebrow">Da dove veniamo</p><h2>Le radici nel pane</h2><p>La Bottega nasce circa dieci anni fa come secondo punto vendita del Forno Coverciano. Da circa due anni Elena porta avanti quel legame e allarga la selezione, con la stessa idea semplice: scegliere cose che siano davvero buone.</p><a class="text-link" href="/storia/">Conosci la nostra storia <span aria-hidden="true">→</span></a></div></section>

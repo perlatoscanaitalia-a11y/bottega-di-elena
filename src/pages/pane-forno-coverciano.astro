@@ -1,7 +1,7 @@
 ﻿---
 import BaseLayout from '../layouts/BaseLayout.astro'; import Hero from '../components/Hero.astro'; import ProductList from '../components/ProductList.astro'; import { products } from '../data/site';
 ---
-<BaseLayout title="Pane fresco del Forno Coverciano a Firenze | ELENA – Bottega dei Sapori Toscani" description="Pane fresco, Panaccio, schiacciate e specialità del Forno Coverciano disponibili da ELENA in Via Masaccio a Firenze.">
+<BaseLayout title="Pane fresco del Forno Coverciano a Firenze | PANIFICIO ELENA – Bottega dei Sapori Toscani" description="Pane fresco, Panaccio, schiacciate e specialità del Forno Coverciano disponibili da PANIFICIO ELENA in Via Masaccio a Firenze.">
   <Hero compact eyebrow="Il pane · Forno Coverciano" title="Il pane è il punto da cui siamo partiti." text="La Bottega nasce come secondo punto vendita del Forno Coverciano, piccola impresa familiare. Ancora oggi quel rapporto è una parte viva della nostra identità." image="/images/logo-forno-coverciano.jpg" imageAlt="Logo Il Pane del Forno Coverciano — Il pane come una volta" />
   <section class="feature shell"><p class="eyebrow">Da conoscere</p><h2>Il Panaccio del Forno Coverciano</h2><p class="lead">Uno dei pani che raccontano meglio il legame tra la Bottega e il forno. Chiedici quale versione è disponibile oggi.</p></section>
   <div class="section shell product-columns"><ProductList title="Pani" items={products.pane} /><ProductList title="Schiacciate e croccantelle" items={products.schiacciate} /><ProductList title="Specialità salate" items={products.fornoSalato} /></div>

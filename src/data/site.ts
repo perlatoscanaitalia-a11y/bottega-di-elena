@@ -1,5 +1,5 @@
 ﻿export const site = {
-  name: 'ELENA – Bottega dei Sapori Toscani',
+  name: 'PANIFICIO ELENA – Bottega dei Sapori Toscani',
   url: 'https://bottegadielena.it',
   phone: '+39 327 003 4324',
   phoneHref: 'tel:+393270034324',
@@ -27,7 +27,7 @@
     { label: 'Sabato', display: '9:00–13:30', days: ['Saturday'], ranges: [{ opens: '09:00', closes: '13:30' }] },
     { label: 'Domenica', display: 'Chiuso', days: ['Sunday'], ranges: [] },
   ],
-  elena: { enabled: false, url: '', label: 'Fai la spesa con ELENA' },
+  elena: { enabled: false, url: '', label: 'Fai la spesa con PANIFICIO ELENA' },
   nav: [
     { href: '/', label: 'Home' },
     { href: '/prodotti/', label: 'Prodotti' },

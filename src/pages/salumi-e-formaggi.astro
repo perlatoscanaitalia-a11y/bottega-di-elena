@@ -1,7 +1,7 @@
 ﻿---
 import BaseLayout from '../layouts/BaseLayout.astro'; import Hero from '../components/Hero.astro'; import ProductList from '../components/ProductList.astro'; import { products } from '../data/site';
 ---
-<BaseLayout title="Salumi e formaggi a Firenze | ELENA – Bottega dei Sapori Toscani" description="Salumi, pecorini, mozzarelle, formaggi e gastronomia selezionati da ELENA in Via Masaccio a Firenze.">
+<BaseLayout title="Salumi e formaggi a Firenze | PANIFICIO ELENA – Bottega dei Sapori Toscani" description="Salumi, pecorini, mozzarelle, formaggi e gastronomia selezionati da PANIFICIO ELENA in Via Masaccio a Firenze.">
   <Hero compact eyebrow="Il banco" title="Salumi e formaggi scelti uno per uno." text="Sapori toscani, prodotti di produttori conosciuti e grandi classici. La selezione può cambiare: è il modo più onesto per continuare a cercare qualità." />
   <div class="section shell product-columns"><ProductList title="Salumi" items={products.salumi} /><ProductList title="Formaggi e latticini" items={products.formaggi} /><ProductList title="Gastronomia" items={products.gastronomia} /></div>
   <section class="note shell"><strong>Una nota sulla disponibilità</strong><p>Alcuni prodotti arrivano in giorni precisi, come la Salsiccia Scarpaccia ogni martedì. Per una richiesta specifica, chiamaci prima di passare.</p></section>

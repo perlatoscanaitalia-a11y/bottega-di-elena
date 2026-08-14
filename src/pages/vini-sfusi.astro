@@ -1,7 +1,7 @@
 ﻿---
 import BaseLayout from '../layouts/BaseLayout.astro'; import Hero from '../components/Hero.astro'; import ProductList from '../components/ProductList.astro'; import { products } from '../data/site';
 ---
-<BaseLayout title="Vini sfusi a Firenze | ELENA – Bottega dei Sapori Toscani" description="Traminer, Ribolla Gialla e altri vini sfusi e in bottiglia da ELENA in Via Masaccio a Firenze.">
+<BaseLayout title="Vini sfusi a Firenze | PANIFICIO ELENA – Bottega dei Sapori Toscani" description="Traminer, Ribolla Gialla e altri vini sfusi e in bottiglia da PANIFICIO ELENA in Via Masaccio a Firenze.">
   <Hero compact eyebrow="Vini sfusi · Firenze" title="Il vino quotidiano, senza troppe cerimonie." text="In Bottega trovi vini sfusi da portare a tavola e una selezione di bottiglie. Le etichette cambiano: chiedici cosa è disponibile." />
   <div class="section shell two-columns"><ProductList title="Vini sfusi" items={products.viniSfusi} intro="Tra le proposte attualmente conosciute:" /><ProductList title="Altri vini" items={products.vini} intro="Una selezione in aggiornamento, senza indicazioni non ancora confermate." /></div>
   <section class="note shell"><strong>Trasparenza prima di tutto</strong><p>Non pubblichiamo gradazioni, denominazioni o prezzi finché non sono confermati. Per la selezione del momento, passa in negozio o chiamaci.</p></section>

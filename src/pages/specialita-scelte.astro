@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'; import Hero from '../components/Hero.astro'; import SpecialtyCard from '../components/SpecialtyCard.astro'; import { selectedSpecialties } from '../data/site';
 ---
-<BaseLayout title="Specialità premiate e scelte | ELENA Firenze" description="Scopri Cotto '60 Branchi, Favola Gran Riserva Palmieri e le specialità premiate e selezionate per il banco di ELENA a Firenze.">
-  <Hero compact eyebrow="Le specialità scelte" title="Premiati. Scelti da ELENA." text="Ci sono prodotti buoni. E poi ci sono quelli che si fanno ricordare. Li abbiamo scelti per il gusto, e qualcuno se n’è accorto anche prima di noi." />
+<BaseLayout title="Specialità premiate e scelte | PANIFICIO ELENA Firenze" description="Scopri Cotto '60 Branchi, Favola Gran Riserva Palmieri e le specialità premiate e selezionate per il banco di PANIFICIO ELENA a Firenze.">
+  <Hero compact eyebrow="Le specialità scelte" title="Premiati. Scelti da PANIFICIO ELENA." text="Ci sono prodotti buoni. E poi ci sono quelli che si fanno ricordare. Li abbiamo scelti per il gusto, e qualcuno se n’è accorto anche prima di noi." />
   <section class="section shell"><div class="specialty-stack">{selectedSpecialties.map((product) => <SpecialtyCard product={product} detailed />)}</div></section>
   <section class="soft section"><div class="shell narrow"><p class="eyebrow">Il nostro criterio</p><h2>La medaglia conta. Il sapore di più.</h2><p class="lead">I riconoscimenti fanno piacere e aiutano a raccontare un prodotto. Ma al banco arriva solo ciò che avremmo scelto anche senza coppa, spillo o classifica.</p><a class="text-link" href="/salumi-e-formaggi/">Scopri il resto del banco <span aria-hidden="true">→</span></a></div></section>
 </BaseLayout>
