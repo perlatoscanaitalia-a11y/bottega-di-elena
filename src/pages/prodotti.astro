@@ -1,0 +1,11 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro'; import Hero from '../components/Hero.astro'; import ElenaCta from '../components/ElenaCta.astro'; import { categories, products } from '../data/site';
+---
+<BaseLayout title="Prodotti alimentari selezionati a Firenze | ELENA – Bottega dei Sapori Toscani" description="Scopri pane, gastronomia, salumi, formaggi, dolci, frutta e verdura di stagione e vini sfusi di ELENA a Firenze.">
+  <Hero compact eyebrow="La nostra selezione" title="Prodotti che vale la pena portare a tavola." text="L’assortimento evolve con la stagione e con ciò che troviamo di buono. Qui trovi una panoramica, senza prezzi né promesse di disponibilità fissa." />
+  <section class="shell specialties-callout"><div><p class="eyebrow">Dal nostro banco</p><h2>Premiati. Scelti da ELENA.</h2><p>Due prodotti di punta, scelti prima di tutto perché sono buoni. I riconoscimenti sono arrivati dopo — o quasi.</p></div><a class="button" href="/specialita-scelte/">Scopri le specialità</a></section>
+  <section class="section shell"><div class="card-grid">{categories.map((c, i) => <a class={`category-card tone-${i + 1}`} href={c.href}><p class="eyebrow">{c.eyebrow}</p><h2>{c.title}</h2><p>{c.text}</p><span class="text-link">Approfondisci →</span></a>)}</div></section>
+  <section class="section soft"><div class="shell two-columns"><div><p class="eyebrow">Dolci e forno</p><h2>Per la colazione e non solo</h2><ul class="simple-list">{products.dolci.slice(0, 7).map(p => <li>{p}</li>)}</ul></div><div><p class="eyebrow">Gastronomia</p><h2>Piccole cose buone</h2><ul class="simple-list">{products.gastronomia.map(p => <li>{p}</li>)}</ul></div></div></section>
+  <div class="shell section"><ElenaCta /></div>
+</BaseLayout>
+

@@ -1,0 +1,10 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro'; import Hero from '../components/Hero.astro'; import { site } from '../data/site';
+---
+<BaseLayout title="Dove siamo e orari | ELENA – Bottega dei Sapori Toscani Firenze" description="Trova ELENA – Bottega dei Sapori Toscani in Via Masaccio 16 R/B, altezza civico 184, Firenze. Consulta telefono e orari da settembre.">
+  <Hero compact eyebrow="Dove siamo" title="In Via Masaccio, a Firenze." text="Siamo una bottega di quartiere nella zona di Campo di Marte. Il nostro ingresso è al 16 R/B, all’altezza del civico 184." />
+  <section class="section shell contact-grid"><div><p class="eyebrow">Indirizzo</p><h2>{site.address.street}</h2><p>{site.address.postalCode} {site.address.city}<br /><strong>{site.address.note}</strong></p><p><a class="button" href={site.phoneHref}>Chiama {site.phone}</a></p><p class="muted">Email futura: {site.futureEmail}<br />Non ancora indicata come contatto attivo.</p></div><div class="hours-card"><h2>Orari da settembre</h2>{site.hours.map((h) => <p class="hours"><span>{h.label}</span><strong>{h.display}</strong></p>)}</div></section>
+  <section class="shell section"><div class="map-placeholder" role="img" aria-label="Spazio predisposto per la futura mappa della Bottega"><p class="eyebrow">Mappa</p><h2>Qui verrà inserita la mappa</h2><p>Il collegamento sarà aggiunto dopo la conferma della scheda ufficiale, senza usare coordinate inventate.</p></div></section>
+  <section class="faq shell section"><p class="eyebrow">Indicazioni utili</p><h2>Prima di venire</h2><details><summary>Qual è il civico corretto?</summary><p>L’indirizzo è Via Masaccio 16 R/B. Come riferimento, il negozio si trova all’altezza del civico 184.</p></details><details><summary>La disponibilità dei prodotti è sempre la stessa?</summary><p>No. Pane, prodotti freschi, frutta e verdura possono variare. Per una richiesta specifica, chiamaci.</p></details></section>
+</BaseLayout>
+

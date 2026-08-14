@@ -1,0 +1,38 @@
+﻿---
+import '../styles/global.css';
+import { site } from '../data/site';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+interface Props { title: string; description: string; path?: string; }
+const { title, description, path = Astro.url.pathname } = Astro.props;
+const canonical = new URL(path, site.url).toString();
+const openingHoursSpecification = site.hours.flatMap((entry) => entry.ranges.map((range) => ({ '@type': 'OpeningHoursSpecification', dayOfWeek: entry.days, opens: range.opens, closes: range.closes })));
+const schema = { '@context': 'https://schema.org', '@type': 'GroceryStore', name: site.name, url: site.url, telephone: site.phone, description: 'Bottega alimentare a Firenze con pane del Forno Coverciano, gastronomia, salumi, formaggi, frutta e verdura di stagione e vini sfusi.', address: { '@type': 'PostalAddress', streetAddress: site.address.street, postalCode: site.address.postalCode, addressLocality: site.address.city, addressRegion: site.address.region, addressCountry: site.address.country }, openingHoursSpecification };
+---
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#254d3d" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+    <Header />
+    <main id="contenuto"><slot /></main>
+    <Footer />
+  </body>
+</html>
+

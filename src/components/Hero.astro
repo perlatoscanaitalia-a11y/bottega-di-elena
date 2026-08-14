@@ -1,0 +1,11 @@
+﻿---
+interface Props { eyebrow: string; title: string; text: string; compact?: boolean; }
+const { eyebrow, title, text, compact = false } = Astro.props;
+---
+<section class:list={["page-hero", compact && "page-hero-compact"]}>
+  <div class="shell hero-grid">
+    <div><p class="eyebrow">{eyebrow}</p><h1>{title}</h1><p class="lead">{text}</p><slot name="actions" /></div>
+    <div class="photo-placeholder" role="img" aria-label="Spazio riservato a una futura fotografia reale della Bottega"><span>Una foto vera della Bottega<br />arriverà qui</span></div>
+  </div>
+</section>
+
