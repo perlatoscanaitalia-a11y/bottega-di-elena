@@ -1,5 +1,28 @@
-﻿---
-import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Cookie policy | ELENA – Bottega dei Sapori Toscani" description="Informazioni provvisorie sui cookie del sito ELENA – Bottega dei Sapori Toscani."><section class="legal shell section"><p class="eyebrow">Informazioni legali</p><h1>Cookie policy</h1><div class="legal-warning"><strong>Bozza da completare prima della pubblicazione</strong><p>Il testo definitivo dipenderà dai servizi realmente attivati.</p></div><h2>Versione attuale</h2><p>Il sito è progettato come sito statico e non include strumenti pubblicitari, profilazione, account o commercio elettronico. Non è stato implementato un banner perché non sono stati aggiunti cookie non tecnici.</p><h2>Verifica prima della pubblicazione</h2><p><strong>TODO:</strong> effettuare una scansione dei cookie dopo la scelta dell’hosting e dopo l’eventuale aggiunta di mappe, statistiche o contenuti esterni. Se saranno introdotti servizi non essenziali, predisporre gestione del consenso e informativa aggiornata.</p></section></BaseLayout>
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+<BaseLayout title="Cookie Policy | ELENA – Bottega dei Sapori Toscani" description="Informazioni sui cookie e sulle tecnologie di tracciamento utilizzate da bottegadielena.it.">
+  <article class="legal shell section">
+    <p class="eyebrow">Trasparenza sulle tecnologie del sito</p>
+    <h1>Cookie Policy</h1>
+    <p class="legal-updated">Ultimo aggiornamento: 14 agosto 2026</p>
+    <h2>1. Cosa sono i cookie</h2>
+    <p>I cookie sono piccoli file che un sito può salvare sul dispositivo del visitatore. Tecnologie come local storage, pixel e identificatori possono svolgere funzioni analoghe.</p>
+    <h2>2. Situazione attuale del sito</h2>
+    <p><strong>{site.url} non installa cookie tramite il proprio codice e non utilizza local storage o session storage.</strong> Non sono presenti strumenti statistici, pubblicitari o di profilazione, né contenuti incorporati di Google Maps, YouTube, Meta, Instagram o altri fornitori.</p>
+    <h2>3. Categorie</h2>
+    <div class="cookie-policy-grid">
+      <section><h3>Tecnici o necessari</h3><p>Il codice del sito non scrive cookie. L’hosting elabora comunque richieste di rete e log tecnici indispensabili a erogazione e sicurezza; tali attività non sono controllate da preferenze opzionali del sito.</p></section>
+      <section><h3>Preferenze</h3><p>Non utilizzati.</p></section>
+      <section><h3>Statistici</h3><p>Non utilizzati. Non è presente Google Analytics né uno strumento equivalente.</p></section>
+      <section><h3>Marketing e profilazione</h3><p>Non utilizzati. Non sono presenti Meta Pixel o tecnologie pubblicitarie.</p></section>
+    </div>
+    <h2>4. Perché non compare un banner al primo accesso</h2>
+    <p>Non essendoci cookie o tracker facoltativi, non è richiesto alcun consenso e non avrebbe senso mostrare pulsanti “Accetta” o “Rifiuta”. Il sito evita quindi un banner invasivo. Il comando “Gestisci preferenze cookie” nel footer apre in ogni momento un riepilogo accessibile delle categorie attive e assenti.</p>
+    <h2>5. Hosting GitHub Pages</h2>
+    <p>Il sito è distribuito attraverso GitHub Pages. GitHub registra l’indirizzo IP dei visitatori per finalità di sicurezza. Per informazioni sul trattamento infrastrutturale consulta la <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">documentazione GitHub Pages</a> e la <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Privacy Statement di GitHub</a>.</p>
+    <h2>6. Aggiornamenti e contatti</h2>
+    <p>Se verranno aggiunti servizi non necessari, saranno bloccati prima del consenso e questa policy verrà aggiornata prima della loro attivazione. Per domande scrivi a <a href={site.emailHref}>{site.email}</a>.</p>
+  </article>
+</BaseLayout>

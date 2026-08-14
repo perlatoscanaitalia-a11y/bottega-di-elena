@@ -3,11 +3,11 @@ import { site } from '../data/site';
 ---
 <footer class="site-footer">
   <div class="shell footer-grid">
-    <div><p class="footer-brand">ELENA</p><p>Bottega dei Sapori Toscani<br />Le radici nel pane. Oggi, una bottega di cose buone.</p></div>
-    <div><h2>Ci trovi qui</h2><p>{site.address.street}, {site.address.postalCode} {site.address.city}<br /><span class="muted">{site.address.note}</span></p><p><a href={site.phoneHref}>{site.phone}</a></p></div>
+    <div><p class="footer-brand">ELENA</p><p>Bottega dei Sapori Toscani<br /><strong>{site.legalName}</strong><br />P. IVA e C.F. {site.company.vatNumber}<br />REA {site.company.rea}</p></div>
+    <div><h2>Ci trovi qui</h2><p>{site.address.street}, {site.address.postalCode} {site.address.city} ({site.address.region})<br /><span class="muted">{site.address.note}</span></p><p><a href={site.phoneHref}>{site.phone}</a><br /><a href={site.emailHref}>{site.email}</a></p></div>
     <div><h2>Orari da settembre</h2>{site.hours.map((h) => <p class="hours"><span>{h.label}</span><strong>{h.display}</strong></p>)}</div>
-    <div><h2>Informazioni</h2><p><a href="/privacy/">Privacy</a><br /><a href="/cookie-policy/">Cookie policy</a><br /><a href="/dove-siamo/">Dove siamo</a></p></div>
+    <div><h2>Informazioni</h2><p><a href="/privacy-policy/">Privacy Policy</a><br /><a href="/cookie-policy/">Cookie Policy</a><br /><button class="footer-link" type="button" data-cookie-preferences-open>Gestisci preferenze cookie</button><br /><a href="/dove-siamo/">Dove siamo</a></p></div>
   </div>
-  <div class="shell footer-bottom"><span>© {new Date().getFullYear()} {site.name}</span><span>Firenze · Via Masaccio</span></div>
+  <div class="shell footer-bottom"><span>© {new Date().getFullYear()} {site.name}</span><span>{site.company.businessRegister}</span></div>
 </footer>
 

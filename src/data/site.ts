@@ -3,7 +3,17 @@
   url: 'https://bottegadielena.it',
   phone: '+39 327 003 4324',
   phoneHref: 'tel:+393270034324',
-  futureEmail: 'info@bottegadielena.it',
+  email: 'info@bottegadielena.it',
+  emailHref: 'mailto:info@bottegadielena.it',
+  legalName: 'ELENA S.R.L.S.',
+  company: {
+    vatNumber: '07332190482',
+    taxCode: '07332190482',
+    businessRegister: 'Registro Imprese di Firenze',
+    rea: 'FI-696235',
+    pec: 'elenasrls2024@pec.it',
+    pecHref: 'mailto:elenasrls2024@pec.it',
+  },
   address: {
     street: 'Via Masaccio 16 R/B',
     postalCode: '50132',
@@ -48,7 +58,7 @@ export const products = {
 };
 
 export const selectedSpecialties = [
-  { slug: 'cotto-60-branchi', name: "Cotto '60", producer: 'Branchi', description: 'Morbido, profumato e delicato. Nel 2024 Gambero Rosso lo ha nuovamente messo al primo posto nella sua degustazione dei prosciutti cotti premium e artigianali. Noi lo avevamo già scelto per il banco.', featuredRecognition: '🥇 1° classificato Gambero Rosso 2024', recognitions: ['1° classificato nella degustazione Gambero Rosso 2024 dedicata ai prosciutti cotti premium e artigianali', 'Miglior Cotto d’Italia nella classifica Gambero Rosso 2011', 'Top Italian Food 2021'], tone: 'gold' },
+  { slug: 'cotto-60-branchi', name: "Cotto '60", producer: 'Branchi', image: '/images/cotto-60-branchi-top-italian-food.jpg', imageAlt: "Prosciutto cotto Cotto '60 Branchi con riconoscimento Gambero Rosso Top Italian Food 2022", description: 'Morbido, profumato e delicato. Nel 2024 Gambero Rosso lo ha nuovamente messo al primo posto nella sua degustazione dei prosciutti cotti premium e artigianali. Noi lo avevamo già scelto per il banco.', featuredRecognition: '🥇 1° classificato Gambero Rosso 2024', recognitions: ['1° classificato nella degustazione Gambero Rosso 2024 dedicata ai prosciutti cotti premium e artigianali', 'Miglior Cotto d’Italia nella classifica Gambero Rosso 2011', 'Top Italian Food 2021'], tone: 'gold' },
   { slug: 'favola-gran-riserva-palmieri', name: 'Favola Gran Riserva', producer: 'Palmieri', image: '/images/favola-gran-riserva-palmieri.webp', imageAlt: 'Mortadella Favola Gran Riserva Palmieri', description: 'Una mortadella che non ha bisogno di molte presentazioni. È una delle specialità che abbiamo scelto per il nostro banco: il resto lo raccontano il profumo, la fetta e i riconoscimenti ricevuti.', featuredRecognition: 'Cinque Spilli · Guida Salumi d’Italia 2025', recognitions: ['Cinque Spilli, Migliore Mortadella d’Italia e Miglior Salume d’Italia — Guida Salumi d’Italia 2025', 'Inserita da Gambero Rosso tra le migliori mortadelle artigianali in una propria degustazione'], tone: 'rose' },
 ];
 
