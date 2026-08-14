@@ -12,5 +12,7 @@
 .hero-photo{overflow:hidden;padding:0;background:#fff}.hero-photo img{display:block;width:100%;height:100%;min-height:280px;object-fit:contain}
 .bread-shape-logo{overflow:hidden;background:#fff}.bread-shape-logo img{display:block;width:100%;height:100%;min-height:350px;object-fit:contain}
 .map-embed{overflow:hidden;border-radius:var(--radius);box-shadow:var(--shadow);background:var(--cream)}.map-embed iframe{display:block;width:100%;height:450px;border:0}
+.location-hero h1{font-size:clamp(2.8rem,6vw,5rem)}
 @media(max-width:600px){.map-embed iframe{height:350px}}
+@media(min-width:980px){.location-hero h1{max-width:8em}}
 @media(min-width:760px){.cookie-policy-grid{grid-template-columns:repeat(2,1fr)}}
