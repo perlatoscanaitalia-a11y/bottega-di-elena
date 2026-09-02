@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+
+const title = 'Aglio nero: proprietà, benefici, ricette e dove trovarlo a Firenze';
+const description = "Cos'è l'aglio nero? Scopri proprietà, sapore, differenze dall'aglio comune, come utilizzarlo e 3 semplici ricette. Disponibile da ELENA a Firenze.";
+const path = '/aglio-nero-proprieta-ricette-firenze/';
+const image = '/images/aglio-nero-proprieta-ricette-firenze.webp';
+const imageAlt = 'Aglio nero con spicchi aperti, pane e pecorino';
+const canonical = new URL(path, site.url).toString();
+const imageUrl = new URL(image, site.url).toString();
+const datePublished = '2026-09-02';
+const faqs = [
+  { question: "Cos’è l’aglio nero?", answer: "L’aglio nero è aglio comune sottoposto a un lungo processo controllato di maturazione con temperatura e umidità definite. Il processo rende gli spicchi neri, morbidi e dal gusto dolce e balsamico." },
+  { question: "Che sapore ha l’aglio nero?", answer: "Ha un sapore dolce, umami e poco pungente, con note che ricordano l’aceto balsamico, la frutta essiccata e il caramello." },
+  { question: "Come si mangia l’aglio nero?", answer: "Si può mangiare direttamente oppure schiacciare e aggiungere a crostini, formaggi, pasta, risotti, carne, verdure e salse. Non è necessario cuocerlo." },
+  { question: "Quali proprietà ha l’aglio nero?", answer: "Contiene composti fenolici e solforati, tra cui la S-allil-cisteina, ed è studiato soprattutto per la sua attività antiossidante. È un alimento e non sostituisce cure o indicazioni mediche." },
+  { question: "Dove comprare l’aglio nero a Firenze?", answer: "L’aglio nero è disponibile da ELENA – Bottega dei Sapori Toscani, in Via Masaccio 184 a Firenze. La disponibilità può variare: prima di passare è possibile telefonare alla Bottega." },
+];
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: 'Aglio nero: proprietà, benefici, sapore e come usarlo in cucina',
+    description,
+    image: { '@type': 'ImageObject', url: imageUrl, width: 1200, height: 630 },
+    datePublished,
+    dateModified: datePublished,
+    author: { '@type': 'Organization', name: 'ELENA – Bottega dei Sapori Toscani', url: site.url },
+    publisher: { '@type': 'Organization', name: 'ELENA – Bottega dei Sapori Toscani', url: site.url },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+    inLanguage: 'it-IT',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: { '@type': 'Answer', text: answer },
+    })),
+  },
+];
+---
+<BaseLayout {title} {description} {path} {image} imageAlt={imageAlt} imageWidth={1200} imageHeight={630} ogType="article" structuredData={structuredData}>
+  <nav class="breadcrumb shell" aria-label="Percorso di navigazione"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Aglio nero</span></nav>
+
+  <article class="article-page">
+    <header class="article-hero shell">
+      <div class="article-heading">
+        <p class="eyebrow">Sapori da scoprire · Firenze</p>
+        <h1>Aglio nero: proprietà, benefici, sapore e come usarlo in cucina</h1>
+        <p class="lead">L’aglio nero è aglio comune maturato a temperatura e umidità controllate: diventa morbido, dolce, balsamico e ricco di note umami. Si mangia anche senza cottura e ne basta poco per dare carattere a molti piatti.</p>
+        <p class="article-meta">Pubblicato il <time datetime={datePublished}>2 settembre 2026</time> · ELENA – Bottega dei Sapori Toscani, Firenze</p>
+      </div>
+      <figure class="article-cover">
+        <img src={image} width="1200" height="630" alt={imageAlt} fetchpriority="high" decoding="async" />
+      </figure>
+    </header>
+
+    <div class="article-body shell">
+      <p>L’aglio nero incuriosisce al primo sguardo: all’esterno assomiglia a un normale bulbo d’aglio, ma quando viene aperto rivela spicchi completamente neri, morbidi e quasi cremosi.</p>
+      <p>Non è una particolare varietà di aglio e non viene colorato. Si ottiene attraverso un lungo processo controllato di maturazione dell’aglio, durante il quale temperatura e umidità ne trasformano progressivamente colore, consistenza, aroma e composizione.</p>
+      <p>Il risultato è molto diverso dall’aglio fresco: meno pungente, più dolce, morbido e ricco di note umami e balsamiche. Ma perché l’aglio nero è diventato così interessante? Vediamo cosa contiene, quali proprietà sono realmente studiate e, soprattutto, come utilizzarlo in cucina.</p>
+
+      <h2>Che sapore ha l’aglio nero?</h2>
+      <p>È probabilmente la sorpresa più grande per chi lo assaggia per la prima volta.</p>
+      <p>L’aglio nero perde gran parte della tipica aggressività dell’aglio fresco. Il sapore diventa dolce e complesso, con note che possono ricordare l’aceto balsamico, la frutta essiccata e una leggera componente caramellata.</p>
+      <p>Gli spicchi sono morbidi e possono essere schiacciati e trasformati facilmente in una crema, anche semplicemente con una forchetta. Per questo può essere interessante anche per chi normalmente evita l’aglio per il suo sapore troppo intenso.</p>
+
+      <h2>Quali sono le proprietà dell’aglio nero?</h2>
+      <p>Durante la maturazione avvengono importanti trasformazioni chimiche. Tra i composti più studiati dell’aglio maturato troviamo la S-allil-cisteina (SAC), insieme a diversi composti fenolici e solforati.</p>
+
+      <h3>1. Attività antiossidante</h3>
+      <p>È una delle caratteristiche più studiate dell’aglio nero. Il processo di maturazione modifica il profilo dei composti bioattivi dell’aglio e numerosi studi hanno osservato una significativa attività antiossidante.</p>
+      <p>Gli antiossidanti contribuiscono alla protezione delle cellule dallo stress ossidativo.</p>
+
+      <h3>2. Aglio nero e salute cardiovascolare</h3>
+      <p>Alcune ricerche hanno studiato l’aglio nero e gli estratti di aglio maturato in relazione a parametri come pressione arteriosa, profilo lipidico e funzione cardiovascolare.</p>
+      <aside class="article-note"><strong>È importante non esagerarne il significato:</strong> l’aglio nero è un alimento, non un farmaco, e la ricerca clinica specifica è ancora limitata. Non deve quindi essere considerato una cura per pressione alta, colesterolo o altre patologie.</aside>
+
+      <h3>3. Composti solforati</h3>
+      <p>La maturazione modifica alcuni dei composti solforati caratteristici dell’aglio fresco e porta alla formazione o maggiore presenza di composti più stabili e idrosolubili, tra cui la già citata S-allil-cisteina.</p>
+      <p>È uno dei motivi per cui l’aglio nero continua a essere oggetto di ricerca scientifica.</p>
+
+      <h2>Aglio nero e aglio normale: qual è la differenza?</h2>
+      <div class="comparison" role="group" aria-label="Confronto tra aglio fresco e aglio nero">
+        <div><span>Aglio fresco</span><strong>Pungente, croccante e fortemente aromatico</strong></div>
+        <div><span>Aglio nero</span><strong>Morbido, dolce, balsamico e umami</strong></div>
+      </div>
+      <p>Non si tratta semplicemente dello stesso prodotto con un colore diverso. Anche la composizione cambia durante il processo di maturazione. Questo però non significa che l’aglio nero sia automaticamente “migliore” dell’aglio fresco sotto ogni aspetto: sono due alimenti con caratteristiche differenti.</p>
+      <p>In cucina, soprattutto, hanno utilizzi molto diversi.</p>
+
+      <h2>Come si mangia l’aglio nero?</h2>
+      <p><strong>Non occorre cucinarlo.</strong> Lo spicchio può essere estratto dal bulbo e mangiato direttamente oppure schiacciato, spalmato, tritato o aggiunto a una preparazione.</p>
+      <p>Ne basta generalmente una piccola quantità per dare carattere al piatto. Si abbina particolarmente bene con pane e crostini, formaggi stagionati, <a href="/salumi-e-formaggi/">pecorino</a>, pasta, risotti, carne, verdure, salse e olio extravergine di oliva.</p>
+
+      <section class="recipes" aria-labelledby="ricette-title">
+        <p class="eyebrow">Idee in cucina</p>
+        <h2 id="ricette-title">3 ricette semplici con l’aglio nero</h2>
+        <div class="recipe-grid">
+          <section><span>01</span><h3>Crostone con pecorino e aglio nero</h3><p>Tostate una fetta di pane, schiacciate sopra uno spicchio di aglio nero e aggiungete qualche scaglia di pecorino stagionato. Completate con un filo di olio extravergine di oliva.</p><p>Pochissimi ingredienti permettono di sentire molto bene il contrasto tra la sapidità del formaggio e la componente dolce e balsamica dell’aglio nero.</p></section>
+          <section><span>02</span><h3>Spaghetti con aglio nero, olio e peperoncino</h3><p>Schiacciate alcuni spicchi di aglio nero e amalgamateli con olio extravergine di oliva. Condite gli spaghetti aggiungendo peperoncino secondo il proprio gusto e poca acqua di cottura per ottenere una salsa cremosa.</p><p>È un modo semplice per reinterpretare un grande classico italiano.</p></section>
+          <section><span>03</span><h3>Pecorino, miele e aglio nero</h3><p>Per un piccolo antipasto o aperitivo preparate una scaglia di pecorino stagionato, aggiungete una piccola quantità di aglio nero e terminate con una goccia di miele.</p><p>Tre sapori molto diversi che insieme creano un boccone dolce, sapido e umami.</p></section>
+        </div>
+      </section>
+
+      <h2>Dove trovare l’aglio nero a Firenze?</h2>
+      <p>L’aglio nero è disponibile anche da <strong>ELENA – Bottega dei Sapori Toscani</strong> a Firenze, in Via Masaccio 184.</p>
+      <p>Lo abbiamo scelto perché ci piace far conoscere, accanto ai sapori della tradizione, anche prodotti particolari che possano offrire nuovi abbinamenti in cucina.</p>
+      <p>Chi non lo ha mai provato può passare in Bottega e scoprire da vicino consistenza, sapore e possibili utilizzi. Consulta la pagina <a href="/dove-siamo/">Dove siamo</a> per orari, contatti e indicazioni.</p>
+      <address><strong>ELENA – Bottega dei Sapori Toscani</strong><br />Via Masaccio 184 · Firenze</address>
+
+      <section class="faq article-faq" aria-labelledby="faq-title">
+        <p class="eyebrow">Risposte in breve</p>
+        <h2 id="faq-title">Domande frequenti sull’aglio nero</h2>
+        {faqs.map(({ question, answer }) => <details><summary>{question}</summary><p>{answer}</p></details>)}
+      </section>
+
+      <aside class="article-cta">
+        <div><p class="eyebrow">In Bottega a Firenze</p><h2>Vuoi provarlo?</h2><p>Passa da ELENA – Bottega dei Sapori Toscani, Via Masaccio 184, Firenze.</p></div>
+        <a class="button" href="/dove-siamo/">Scopri come arrivare</a>
+      </aside>
+      <p class="article-back"><a class="text-link" href="/">Torna alla homepage</a> · <a class="text-link" href="/prodotti/">Scopri i prodotti della Bottega</a></p>
+    </div>
+  </article>
+</BaseLayout>
