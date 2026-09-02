@@ -1,8 +1,8 @@
 ---
-interface Props { product: { slug: string; name: string; producer: string; image?: string; imageAlt?: string; description: string; featuredRecognition: string; recognitions: string[]; tone: string }; detailed?: boolean; }
+interface Props { product: { slug: string; name: string; producer: string; image?: string; imageAlt?: string; description: string | string[]; featuredRecognition: string; recognitions: string[]; tone: string }; detailed?: boolean; }
 const { product, detailed = false } = Astro.props;
 ---
 <article class:list={['specialty-card', `specialty-${product.tone}`]} id={detailed ? product.slug : undefined}>
   {product.image ? <div class="specialty-photo specialty-photo-real"><img src={product.image} alt={product.imageAlt} loading="lazy" decoding="async" /></div> : <div class="specialty-photo" role="img" aria-label={`Spazio riservato alla fotografia reale di ${product.name} di ${product.producer}`}><span>Fotografia del prodotto<br />in arrivo</span></div>}
-  <div class="specialty-copy"><p class="specialty-producer">{product.producer}</p><h3>{product.name}</h3><p>{product.description}</p><p class="recognition-badge">{product.featuredRecognition}</p>{detailed && <ul class="recognition-list">{product.recognitions.map((recognition) => <li>{recognition}</li>)}</ul>}{!detailed && <a class="text-link" href={`/specialita-scelte/#${product.slug}`}>Scopri perché lo abbiamo scelto <span aria-hidden="true">→</span></a>}</div>
+  <div class="specialty-copy"><p class="specialty-producer">{product.producer}</p><h3>{product.name}</h3>{(Array.isArray(product.description) ? product.description : [product.description]).map((paragraph) => <p>{paragraph}</p>)}<p class="recognition-badge">{product.featuredRecognition}</p>{detailed && <ul class="recognition-list">{product.recognitions.map((recognition) => <li>{recognition}</li>)}</ul>}{!detailed && <a class="text-link" href={`/specialita-scelte/#${product.slug}`}>Scopri perché lo abbiamo scelto <span aria-hidden="true">→</span></a>}</div>
 </article>
