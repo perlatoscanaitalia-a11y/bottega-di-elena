@@ -1,0 +1,176 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+import { schiacciateCategories, schiacciateProductCount } from '../data/schiacciate';
+
+const title = 'Schiacciate e Panini a Firenze – Campo di Marte | ELENA';
+const description = 'Schiacciate e panini preparati al momento per il pranzo a Firenze, in zona Campo di Marte. Scopri il menu di ELENA – Bottega dei Sapori Toscani.';
+const path = '/schiacciate-panini-firenze/';
+const heroImage = '/images/schiacciate/hero-schiacciate-elena-firenze.webp';
+const formatPrice = (price: number) => new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR' }).format(price);
+const menuSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Menu',
+  name: 'Schiacciate e panini ELENA',
+  url: new URL(path, site.url).toString(),
+  hasMenuSection: schiacciateCategories.map((category) => ({
+    '@type': 'MenuSection',
+    name: category.name,
+    hasMenuItem: category.products.map((product) => ({
+      '@type': 'MenuItem',
+      name: product.name,
+      description: product.ingredients,
+      offers: { '@type': 'Offer', price: product.price.toFixed(2), priceCurrency: 'EUR' },
+    })),
+  })),
+};
+---
+
+<BaseLayout
+  {title}
+  {description}
+  {path}
+  image={heroImage}
+  imageAlt="Schiacciata farcita preparata da ELENA – Bottega dei Sapori Toscani a Firenze"
+  imageWidth={1200}
+  imageHeight={800}
+  structuredData={menuSchema}
+>
+  <section class="lunch-hero">
+    <div class="shell lunch-hero-grid">
+      <div class="lunch-hero-copy">
+        <p class="eyebrow">Pranzo a Firenze · Campo di Marte</p>
+        <h1>Schiacciate e Panini a Firenze – Campo di Marte</h1>
+        <p class="lead"><strong>ELENA – Bottega dei Sapori Toscani.</strong><br />Schiacciate preparate al momento con salumi, formaggi e specialità selezionate.</p>
+        <div class="order-actions" aria-label="Piattaforme di ordinazione">
+          <button type="button" disabled>Ordina su Deliveroo</button>
+          <button type="button" disabled>Ordina su Glovo</button>
+        </div>
+        <p class="order-note">I link ufficiali per ordinare saranno disponibili a breve.</p>
+      </div>
+      <figure class="lunch-hero-photo">
+        <img src={heroImage} alt="Schiacciata con prosciutto, mozzarella e rucola preparata da ELENA a Firenze" width="1200" height="800" decoding="async" fetchpriority="high" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="menu-intro shell" aria-labelledby="menu-title">
+    <div>
+      <p class="eyebrow">Il menu</p>
+      <h2 id="menu-title">Scegli la tua schiacciata</h2>
+    </div>
+    <p>{schiacciateProductCount} proposte, dalle ricette toscane alle vegetariane, preparate al momento per il tuo pranzo.</p>
+  </section>
+
+  <nav class="category-jump shell" aria-label="Vai a una categoria del menu">
+    {schiacciateCategories.map((category) => <a href={`#${category.id}`}>{category.shortName}</a>)}
+  </nav>
+
+  <div class="menu-sections shell">
+    {schiacciateCategories.map((category) => (
+      <section class="menu-category" id={category.id} aria-labelledby={`${category.id}-title`}>
+        <div class="category-heading">
+          <h2 id={`${category.id}-title`}>{category.name}</h2>
+          <a href="#menu-title" aria-label={`Torna all'inizio del menu da ${category.name}`}>Torna al menu</a>
+        </div>
+        <div class="menu-grid">
+          {category.products.map((product) => (
+            <article class:list={['menu-card', !product.image && 'menu-card-no-photo']}>
+              {product.image && (
+                <img src={product.image} alt={`Schiacciata ${product.name} di ELENA a Firenze`} width="720" height="540" loading="lazy" decoding="async" />
+              )}
+              <div class="menu-card-copy">
+                <div class="product-heading">
+                  <h3>{product.name}</h3>
+                  <p class="price">{formatPrice(product.price)}</p>
+                </div>
+                <p>{product.ingredients}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <section class="order-band">
+    <div class="shell order-band-inner">
+      <div><p class="eyebrow">Hai scelto?</p><h2>Ordina la tua pausa pranzo</h2><p>Gli ordini saranno disponibili esclusivamente tramite Deliveroo e Glovo.</p></div>
+      <div>
+        <div class="order-actions" aria-label="Piattaforme di ordinazione">
+          <button type="button" disabled>Ordina su Deliveroo</button>
+          <button type="button" disabled>Ordina su Glovo</button>
+        </div>
+        <p class="order-note">I link ufficiali saranno aggiunti appena disponibili.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="review-section shell" aria-labelledby="review-title">
+    <p class="eyebrow">Dicono di noi</p>
+    <h2 id="review-title">Una bottega come quelle di una volta</h2>
+    <blockquote>“Ambiente familiare e super fornito di cose buone e fresche. Come i negozi di un tempo.”</blockquote>
+  </section>
+
+  <section class="shop-section">
+    <div class="shell shop-grid">
+      <div><p class="eyebrow">A Firenze, zona Campo di Marte</p><h2>Passa da ELENA</h2><p>Per una schiacciata a pranzo o per scegliere qualcosa di buono dalla bottega.</p></div>
+      <address><strong>ELENA – Bottega dei Sapori Toscani</strong><br />Via Masaccio 16 R/B<br />50132 Firenze</address>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .lunch-hero{padding:clamp(2rem,6vw,4.75rem) 0 2.25rem;background:linear-gradient(150deg,var(--paper) 0%,var(--cream) 100%)}
+  .lunch-hero-grid{display:grid;gap:1.5rem;align-items:center}
+  .lunch-hero-copy h1{max-width:12ch;margin:.45rem 0 1rem;font-size:clamp(2.35rem,8.5vw,5.15rem);line-height:.94}
+  .lunch-hero-copy .lead{max-width:37rem;margin:0;font-size:clamp(1.05rem,2.5vw,1.24rem)}
+  .lunch-hero-photo{margin:0;overflow:hidden;border-radius:var(--radius);background:var(--green);box-shadow:var(--shadow);aspect-ratio:3/2}
+  .lunch-hero-photo img{display:block;width:100%;height:100%;object-fit:cover}
+  .order-actions{display:grid;grid-template-columns:1fr;gap:.65rem;margin-top:1.35rem}
+  .order-actions button{min-height:52px;padding:.75rem 1rem;border:0;border-radius:999px;background:var(--green);color:#fff;font:700 .88rem/1 var(--sans);letter-spacing:.035em;text-transform:uppercase;opacity:1;cursor:not-allowed}
+  .order-actions button:last-child{background:var(--gold);color:var(--ink)}
+  .order-note{margin:.65rem 0 0;color:var(--muted);font-size:.88rem}
+  .menu-intro{display:grid;gap:.65rem;padding-top:3.25rem;padding-bottom:1.25rem}
+  .menu-intro h2{margin:.25rem 0 0;font-size:clamp(2rem,5vw,3.5rem)}
+  .menu-intro>p{max-width:34rem;margin:0;color:var(--muted)}
+  .category-jump{display:flex;gap:.5rem;overflow-x:auto;padding-top:.45rem;padding-bottom:1.1rem;scrollbar-width:none;overscroll-behavior-inline:contain}
+  .category-jump::-webkit-scrollbar{display:none}
+  .category-jump a{flex:0 0 auto;padding:.68rem .95rem;border:1px solid rgba(37,77,61,.2);border-radius:999px;background:var(--paper);color:var(--green);font-size:.9rem;font-weight:700;text-decoration:none}
+  .category-jump a:focus-visible,.category-jump a:hover{background:var(--green);color:#fff}
+  .menu-sections{padding-bottom:3.5rem}
+  .menu-category{padding-top:2rem;scroll-margin-top:5.5rem}
+  .category-heading{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1rem;border-bottom:1px solid var(--line);padding-bottom:.7rem}
+  .category-heading h2{margin:0;font-size:clamp(1.75rem,5vw,2.55rem)}
+  .category-heading a{flex:0 0 auto;color:var(--green);font-size:.83rem;font-weight:700;text-decoration:none}
+  .menu-grid{display:grid;gap:.8rem}
+  .menu-card{display:grid;grid-template-columns:7rem minmax(0,1fr);overflow:hidden;border:1px solid rgba(37,77,61,.13);border-radius:1rem;background:#fff;box-shadow:0 8px 22px rgba(24,55,44,.055)}
+  .menu-card>img{width:100%;height:100%;min-height:8.4rem;object-fit:cover}
+  .menu-card-copy{padding:.9rem}
+  .product-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.6rem;align-items:start}
+  .product-heading h3{margin:0;font:700 1.08rem/1.15 var(--serif);color:var(--ink)}
+  .price{margin:0;color:var(--orange);font-weight:800;white-space:nowrap;font-size:1.02rem}
+  .menu-card-copy>p{margin:.55rem 0 0;color:var(--muted);font-size:.88rem;line-height:1.42}
+  .menu-card-no-photo{display:block;border-left:5px solid var(--gold);background:linear-gradient(140deg,#fff,var(--cream))}
+  .menu-card-no-photo .menu-card-copy{min-height:8.4rem}
+  .order-band{padding:2.75rem 0;background:var(--green);color:#fff}
+  .order-band-inner{display:grid;gap:1.25rem;align-items:center}
+  .order-band h2{margin:.25rem 0 .6rem;color:#fff;font-size:clamp(2rem,5vw,3.2rem)}
+  .order-band p{margin-bottom:0}
+  .order-band .eyebrow,.order-band .order-note{color:#e6dfcf}
+  .order-band .order-actions{margin-top:0}
+  .order-band .order-actions button:first-child{background:#fff;color:var(--green)}
+  .review-section{padding-top:3.75rem;padding-bottom:3.75rem;text-align:center}
+  .review-section h2{margin:.35rem auto 1rem;font-size:clamp(1.8rem,5vw,3rem)}
+  .review-section blockquote{max-width:50rem;margin:0 auto;font:italic clamp(1.35rem,3.7vw,2.25rem)/1.35 var(--serif);color:var(--ink)}
+  .shop-section{padding:3rem 0;background:var(--cream)}
+  .shop-grid{display:grid;gap:1.5rem;align-items:end}
+  .shop-grid h2{margin:.3rem 0 .65rem;font-size:clamp(2rem,5vw,3.2rem)}
+  .shop-grid p{margin-bottom:0}
+  .shop-grid address{padding:1.25rem;border-radius:1rem;background:#fff;font-style:normal;line-height:1.7;box-shadow:var(--shadow)}
+  @media(min-width:520px){.order-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(min-width:760px){.menu-intro,.order-band-inner,.shop-grid{grid-template-columns:1.1fr .9fr}.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.menu-card{grid-template-columns:8rem minmax(0,1fr)}}
+  @media(min-width:980px){.lunch-hero-grid{grid-template-columns:1.02fr .98fr;gap:3rem}.menu-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.menu-card{display:block}.menu-card>img{display:block;aspect-ratio:4/3;min-height:0}.menu-card-copy{padding:1rem}.menu-card-no-photo .menu-card-copy{min-height:15.4rem;padding:1.25rem}.category-jump{flex-wrap:wrap;overflow:visible}}
+  @media(max-width:979px){:global(.site-header .desktop-call){display:none}}
+  @media(max-width:374px){.menu-card{grid-template-columns:6rem minmax(0,1fr)}.menu-card-copy{padding:.75rem}.product-heading{display:block}.price{margin-top:.3rem}}
+</style>
