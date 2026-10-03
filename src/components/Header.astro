@@ -6,7 +6,12 @@ import { site } from '../data/site';
     <a class="brand" href="/" aria-label="PANIFICIO ELENA – Bottega dei Sapori Toscani, home">
       <span class="brand-mark">E</span><span><strong>PANIFICIO ELENA</strong><small>Bottega dei Sapori Toscani · Firenze</small></span>
     </a>
-    <nav aria-label="Navigazione principale">
+    <nav class="desktop-nav" aria-label="Navigazione principale">
+      <div class="nav-links">
+        {site.nav.map((item) => <a href={item.href} aria-current={Astro.url.pathname === item.href ? 'page' : undefined}>{item.label}</a>)}
+      </div>
+    </nav>
+    <nav class="mobile-nav" aria-label="Navigazione principale">
       <details class="nav-menu">
         <summary>Menu</summary>
         <div class="nav-links">
@@ -17,4 +22,9 @@ import { site } from '../data/site';
     <a class="button button-small desktop-call" href={site.phoneHref}>Chiama</a>
   </div>
 </header>
+
+<style>
+  .desktop-nav{display:none}
+  @media(min-width:980px){.desktop-nav{display:block}.mobile-nav{display:none}}
+</style>
 
