@@ -31,6 +31,7 @@
   nav: [
     { href: '/', label: 'Home' },
     { href: '/prodotti/', label: 'Prodotti' },
+    { href: '/schiacciate-panini-firenze/', label: 'Schiacciate' },
     { href: '/pane-forno-coverciano/', label: 'Il pane' },
     { href: '/frutta-e-verdura/', label: 'Frutta e verdura' },
     { href: '/storia/', label: 'La storia' },
