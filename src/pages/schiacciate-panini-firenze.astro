@@ -77,7 +77,9 @@ const menuSchema = {
           {category.products.map((product) => (
             <article class:list={['menu-card', !product.image && 'menu-card-no-photo']}>
               {product.image && (
-                <img src={product.image} alt={`Schiacciata ${product.name} di ELENA a Firenze`} width="720" height="540" loading="lazy" decoding="async" />
+                <div class="menu-card-media">
+                  <img src={product.image} alt={`Schiacciata ${product.name} di ELENA a Firenze`} width="720" height="540" loading="lazy" decoding="async" />
+                </div>
               )}
               <div class="menu-card-copy">
                 <div class="product-heading">
@@ -143,15 +145,16 @@ const menuSchema = {
   .category-heading{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1rem;border-bottom:1px solid var(--line);padding-bottom:.7rem}
   .category-heading h2{margin:0;font-size:clamp(1.75rem,5vw,2.55rem)}
   .category-heading a{flex:0 0 auto;color:var(--green);font-size:.83rem;font-weight:700;text-decoration:none}
-  .menu-grid{display:grid;gap:.8rem}
+  .menu-grid{display:grid;align-items:stretch;gap:.8rem}
   .menu-card{display:grid;grid-template-columns:7rem minmax(0,1fr);overflow:hidden;border:1px solid rgba(37,77,61,.13);border-radius:1rem;background:#fff;box-shadow:0 8px 22px rgba(24,55,44,.055)}
-  .menu-card>img{width:100%;height:100%;min-height:8.4rem;object-fit:cover}
-  .menu-card-copy{padding:.9rem}
+  .menu-card-media{min-width:0;overflow:hidden;background:var(--cream)}
+  .menu-card-media img{display:block;width:100%;height:100%;min-height:8.4rem;object-fit:cover}
+  .menu-card-copy{min-width:0;padding:.9rem}
   .product-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.6rem;align-items:start}
   .product-heading h3{margin:0;font:700 1.08rem/1.15 var(--serif);color:var(--ink)}
   .price{margin:0;color:var(--orange);font-weight:800;white-space:nowrap;font-size:1.02rem}
   .menu-card-copy>p{margin:.55rem 0 0;color:var(--muted);font-size:.88rem;line-height:1.42}
-  .menu-card-no-photo{display:block;border-left:5px solid var(--gold);background:linear-gradient(140deg,#fff,var(--cream))}
+  .menu-card-no-photo{grid-template-columns:minmax(0,1fr);border-left:5px solid var(--gold);background:linear-gradient(140deg,#fff,var(--cream))}
   .menu-card-no-photo .menu-card-copy{min-height:8.4rem}
   .order-band{padding:2.75rem 0;background:var(--green);color:#fff}
   .order-band-inner{display:grid;gap:1.25rem;align-items:center}
@@ -169,8 +172,8 @@ const menuSchema = {
   .shop-grid p{margin-bottom:0}
   .shop-grid address{padding:1.25rem;border-radius:1rem;background:#fff;font-style:normal;line-height:1.7;box-shadow:var(--shadow)}
   @media(min-width:520px){.order-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
-  @media(min-width:760px){.menu-intro,.order-band-inner,.shop-grid{grid-template-columns:1.1fr .9fr}.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.menu-card{grid-template-columns:8rem minmax(0,1fr)}}
-  @media(min-width:980px){.lunch-hero-grid{grid-template-columns:1.02fr .98fr;gap:3rem}.menu-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.menu-card{display:block}.menu-card>img{display:block;aspect-ratio:4/3;min-height:0}.menu-card-copy{padding:1rem}.menu-card-no-photo .menu-card-copy{min-height:15.4rem;padding:1.25rem}.category-jump{flex-wrap:wrap;overflow:visible}}
+  @media(min-width:760px){.menu-intro,.order-band-inner,.shop-grid{grid-template-columns:1.1fr .9fr}.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.menu-card{grid-template-columns:8rem minmax(0,1fr)}.menu-card-no-photo{grid-template-columns:minmax(0,1fr)}}
+  @media(min-width:980px){.lunch-hero-grid{grid-template-columns:1.02fr .98fr;gap:3rem}.menu-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.menu-card{display:flex;min-width:0;height:100%;flex-direction:column}.menu-card-media{flex:0 0 auto;aspect-ratio:4/3}.menu-card-media img{min-height:0}.menu-card-copy{flex:1;padding:1rem}.menu-card-no-photo .menu-card-copy{min-height:15.4rem;padding:1.25rem}.category-jump{flex-wrap:wrap;overflow:visible}}
   @media(max-width:979px){:global(.site-header .desktop-call){display:none}}
   @media(max-width:519px){.lunch-hero-copy h1{font-size:2.05rem;line-height:.92}}
   @media(max-width:374px){.menu-card{grid-template-columns:6rem minmax(0,1fr)}.menu-card-copy{padding:.75rem}.product-heading{display:block}.price{margin-top:.3rem}}

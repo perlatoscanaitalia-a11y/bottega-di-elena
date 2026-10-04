@@ -47,7 +47,7 @@ export const schiacciateCategories: SchiacciataCategory[] = [
     name: 'Le Speciali',
     shortName: 'Speciali',
     products: [
-      { name: 'La Battipaglia', price: 13.9, ingredients: 'Schiacciata toscana; Prosciutto crudo; Mozzarella di Bufala di Battipaglia; Pomodoro fresco; Rucola' },
+      { name: 'La Battipaglia', price: 13.9, ingredients: 'Schiacciata toscana; Prosciutto crudo; Mozzarella di Bufala di Battipaglia; Pomodoro fresco; Rucola', image: '/images/schiacciate/speciali-la-battipaglia.webp' },
       { name: 'La Golosa', price: 12.9, ingredients: 'Schiacciata toscana; Porchetta di Ariccia IGP; Pecorino Toscano; Rucola', image: '/images/schiacciate/speciali-la-golosa.webp' },
       { name: 'La Favola', price: 13.9, ingredients: 'Schiacciata; Mortadella FAVOLA GRAN RISERVA Palmieri; Stracciatella; Granella di pistacchio', image: '/images/schiacciate/speciali-la-favola.webp' },
       { name: 'La Bresaola', price: 13.9, ingredients: 'Schiacciata Forno Coverciano; Bresaola; Pecorino Toscano; Rucola fresca', image: '/images/schiacciate/speciali-la-bresaola.webp' },
@@ -61,7 +61,7 @@ export const schiacciateCategories: SchiacciataCategory[] = [
     shortName: 'Classiche',
     products: [
       { name: 'Crudo & Mozzarella', price: 11.9, ingredients: 'Schiacciata Forno Coverciano; Prosciutto crudo stagionato di Scarpaccia del Casentino; Mozzarella fiordilatte', image: '/images/schiacciate/classiche-crudo-mozzarella.webp' },
-      { name: 'Cotto & Fontina', price: 10.9, ingredients: 'Schiacciata; Prosciutto cotto; Fontina' },
+      { name: 'Cotto & Fontina', price: 10.9, ingredients: 'Schiacciata; Prosciutto cotto; Fontina', image: '/images/schiacciate/classiche-cotto-fontina.webp' },
       { name: 'La Delicata', price: 12.9, ingredients: 'Schiacciata Forno Coverciano; Tacchino; Stracciatella; Rucola fresca', image: '/images/schiacciate/classiche-la-delicata.webp' },
       { name: 'La Scarpaccia', price: 10.9, ingredients: 'Schiacciata Forno Coverciano; Salame Toscano di Scarpaccia del Casentino; Pecorino Toscano', image: '/images/schiacciate/classiche-la-scarpaccia.webp' },
     ],
