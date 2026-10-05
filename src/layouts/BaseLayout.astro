@@ -12,6 +12,8 @@ interface Props {
   imageAlt?: string;
   imageWidth?: number;
   imageHeight?: number;
+  businessImage?: string;
+  preloadImage?: boolean;
   ogType?: 'website' | 'article';
   robots?: string;
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
@@ -24,6 +26,8 @@ const {
   imageAlt,
   imageWidth,
   imageHeight,
+  businessImage,
+  preloadImage = false,
   ogType = 'website',
   robots = 'index, follow, max-image-preview:large',
   structuredData = [],
@@ -32,6 +36,7 @@ const canonical = new URL(path, site.url).toString();
 const socialImage = image ? new URL(image, site.url).toString() : undefined;
 const openingHoursSpecification = site.hours.flatMap((entry) => entry.ranges.map((range) => ({ '@type': 'OpeningHoursSpecification', dayOfWeek: entry.days, opens: range.opens, closes: range.closes })));
 const schema = { '@context': 'https://schema.org', '@type': 'GroceryStore', name: site.name, legalName: site.legalName, url: site.url, telephone: site.phone, email: site.email, description: 'Bottega alimentare a Firenze con pane del Forno Coverciano, gastronomia, salumi, formaggi, frutta e verdura di stagione e vini sfusi.', address: { '@type': 'PostalAddress', streetAddress: site.address.street, postalCode: site.address.postalCode, addressLocality: site.address.city, addressRegion: site.address.region, addressCountry: site.address.country }, openingHoursSpecification };
+const businessSchema = { ...schema, ...(businessImage ? { image: new URL(businessImage, site.url).toString() } : {}) };
 ---
 <!doctype html>
 <html lang="it">
@@ -43,6 +48,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'GroceryStore', name
     <meta name="description" content={description} />
     <meta name="robots" content={robots} />
     <link rel="canonical" href={canonical} />
+    {preloadImage && socialImage && <link rel="preload" as="image" href={socialImage} fetchpriority="high" />}
     <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
     <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48" />
@@ -62,7 +68,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'GroceryStore', name
     <meta name="twitter:description" content={description} />
     {socialImage && <meta name="twitter:image" content={socialImage} />}
     {imageAlt && <meta name="twitter:image:alt" content={imageAlt} />}
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
     {(Array.isArray(structuredData) ? structuredData : [structuredData]).map((item) => (
       <script is:inline type="application/ld+json" set:html={JSON.stringify(item)} />
     ))}
