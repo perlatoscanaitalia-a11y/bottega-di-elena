@@ -1,12 +1,14 @@
 ﻿---
-interface Props { eyebrow: string; title: string; text: string; compact?: boolean; image?: string; imageAlt?: string; }
-const { eyebrow, title, text, compact = false, image, imageAlt } = Astro.props;
+interface Props { eyebrow: string; title: string; text: string; compact?: boolean; image?: string; imageAlt?: string; imageWebp?: string; imageWidth?: number; imageHeight?: number; }
+const { eyebrow, title, text, compact = false, image, imageAlt, imageWebp, imageWidth, imageHeight } = Astro.props;
 ---
 <section class:list={["page-hero", compact && "page-hero-compact"]}>
   <div class="shell hero-grid">
     <div><p class="eyebrow">{eyebrow}</p><h1>{title}</h1><p class="lead">{text}</p><slot name="actions" /></div>
     {image
-      ? <div class="photo-placeholder hero-photo"><img src={image} alt={imageAlt ?? ''} decoding="async" /></div>
+      ? <div class="photo-placeholder hero-photo">{imageWebp
+          ? <picture><source srcset={imageWebp} type="image/webp" /><img src={image} alt={imageAlt ?? ''} width={imageWidth} height={imageHeight} decoding="async" /></picture>
+          : <img src={image} alt={imageAlt ?? ''} decoding="async" />}</div>
       : <div class="photo-placeholder" role="img" aria-label="Spazio riservato a una futura fotografia reale della Bottega"><span>Una foto vera della Bottega<br />arriverà qui</span></div>}
   </div>
 </section>
