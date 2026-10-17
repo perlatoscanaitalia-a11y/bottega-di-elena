@@ -1,13 +1,13 @@
 ---
 import { site } from '../data/site';
 import { mortadellaChannels } from '../data/mortadella';
-interface Props { product: { id: string; name: string; label: string; text: string; en: string; sliced: boolean; available: boolean; image: string | null; alt: string; price: number | null } }
+interface Props { product: { id: string; name: string; label: string; text: string; en: string; sliced: boolean; available: boolean; image: string | null; alt: string; price: number | null; aiGenerated?: boolean } }
 const { product: p } = Astro.props;
 const quantity = p.sliced ? '100 g' : '1 schiacciata';
 const whatsapp = `https://wa.me/${site.phone.replace(/\D/g, '')}?text=${encodeURIComponent(`Buongiorno, vorrei ordinare e ritirare in negozio: ${p.name}, ${quantity}. Potete confermare prezzo, disponibilità e orario di ritiro?`)}`;
 ---
 <article class:list={['mort-product', { 'mort-product-unavailable': !p.available }]} id={p.id} data-product={p.name}>
-  {p.image && <img src={p.image} alt={p.alt} width="800" height="800" loading="lazy" decoding="async" />}
+  {p.image && <figure class="mort-product-image"><img src={p.image} alt={p.alt} width="800" height="800" loading="lazy" decoding="async" />{p.aiGenerated && <figcaption>Immagine illustrativa generata con IA</figcaption>}</figure>}
   <div class="mort-product-copy">
     <p class="eyebrow">{p.label}</p><h3>{p.name}</h3>
     {p.id === 'favola' && <p><strong>Carne selezionata · Miele · Sale Dolce di Cervia</strong><br /><span lang="en">Selected pork · Honey · Sale Dolce di Cervia sea salt</span></p>}

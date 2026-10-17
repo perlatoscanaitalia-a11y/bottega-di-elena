@@ -8,6 +8,7 @@ import { site } from '../data/site';
     <div><h2>Orari da settembre</h2>{site.hours.map((h) => <p class="hours"><span>{h.label}</span><strong>{h.display}</strong></p>)}</div>
     <div><h2>Informazioni</h2><p><a href="/privacy-policy/">Privacy Policy</a><br /><a href="/cookie-policy/">Cookie Policy</a><br /><button class="footer-link" type="button" data-cookie-preferences-open>Gestisci preferenze cookie</button><br /><a href="/dove-siamo/">Dove siamo</a></p></div>
   </div>
+  <slot />
   <div class="shell footer-bottom"><span>© {new Date().getFullYear()} {site.name}</span><span>{site.company.businessRegister}</span></div>
 </footer>
 

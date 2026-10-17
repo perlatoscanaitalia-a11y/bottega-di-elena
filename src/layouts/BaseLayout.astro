@@ -77,7 +77,7 @@ const businessSchema = { ...schema, ...(businessImage ? { image: new URL(busines
     <a class="skip-link" href="#contenuto">Vai al contenuto</a>
     <Header />
     <main id="contenuto"><slot /></main>
-    <Footer />
+    <Footer><slot name="footer-note" /></Footer>
     <CookiePreferences />
   </body>
 </html>

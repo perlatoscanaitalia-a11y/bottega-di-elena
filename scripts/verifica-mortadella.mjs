@@ -25,6 +25,19 @@ assert.match(html, /Richiedi la tessera su WhatsApp/);
 assert.match(html, /up to 44% on selected products/);
 assert.ok(html.indexOf('id="tessera-fedelta"') > html.indexOf('id="tartufina"'));
 assert.match(html, /href="#tessera-fedelta"/);
+const footer = html.match(/<footer\b[\s\S]*?<\/footer>/)?.[0];
+assert.ok(footer);
+assert.ok(footer.includes("Alcune immagini presenti sul sito sono state generate con l'ausilio dell'intelligenza artificiale e hanno finalità illustrative. I prodotti effettivamente serviti possono presentare differenze nell'aspetto e nella presentazione."));
+assert.ok(footer.includes('Some images on this website have been created using artificial intelligence for illustrative purposes. Actual products may differ in appearance and presentation.'));
+assert.match(footer, /<p lang="en">/);
+assert.equal((html.match(/<figcaption>Immagine illustrativa generata con IA<\/figcaption>/g) || []).length, 3);
+for (const id of ['semplice', 'stracciatella', 'tartufina']) {
+  const card = html.match(new RegExp(`<article[^>]*id="${id}"[\\s\\S]*?<\\/article>`))?.[0];
+  assert.ok(card?.includes('<figcaption>Immagine illustrativa generata con IA</figcaption>'));
+}
+const favola = html.match(/<article[^>]*id="favola"[\s\S]*?<\/article>/)?.[0];
+assert.ok(favola);
+assert.doesNotMatch(favola, /generata con IA/);
 const tartufina = html.match(/<article[^>]*id="tartufina"[\s\S]*?<\/article>/)?.[0];
 assert.ok(tartufina);
 assert.doesNotMatch(tartufina, /<a |data-whatsapp|data-quantity/);
