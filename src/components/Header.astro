@@ -25,6 +25,9 @@ import { site } from '../data/site';
 
 <style>
   .desktop-nav{display:none}
-  @media(min-width:980px){.desktop-nav{display:block}.mobile-nav{display:none}}
+  .mobile-nav summary{display:list-item}
+  .mobile-nav .nav-links{position:absolute;display:grid;padding:1rem;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--paper)}
+  .desktop-nav .nav-links a{white-space:nowrap}
+  @media(min-width:1200px){.desktop-nav{display:block}.mobile-nav{display:none}}
 </style>
 
