@@ -35,7 +35,7 @@ const {
 const canonical = new URL(path, site.url).toString();
 const socialImage = image ? new URL(image, site.url).toString() : undefined;
 const openingHoursSpecification = site.hours.flatMap((entry) => entry.ranges.map((range) => ({ '@type': 'OpeningHoursSpecification', dayOfWeek: entry.days, opens: range.opens, closes: range.closes })));
-const schema = { '@context': 'https://schema.org', '@type': 'GroceryStore', name: site.name, legalName: site.legalName, url: site.url, telephone: site.phone, email: site.email, description: 'Bottega alimentare a Firenze con pane del Forno Coverciano, gastronomia, salumi, formaggi, frutta e verdura di stagione e vini sfusi.', address: { '@type': 'PostalAddress', streetAddress: site.address.street, postalCode: site.address.postalCode, addressLocality: site.address.city, addressRegion: site.address.region, addressCountry: site.address.country }, openingHoursSpecification };
+const schema = { '@context': 'https://schema.org', '@type': 'GroceryStore', name: site.name, legalName: site.legalName, url: site.url, hasMap: site.mapsUrl, telephone: site.phone, email: site.email, description: 'Bottega alimentare a Firenze con pane del Forno Coverciano, gastronomia, salumi, formaggi, frutta e verdura di stagione e vini sfusi.', address: { '@type': 'PostalAddress', streetAddress: site.address.street, postalCode: site.address.postalCode, addressLocality: site.address.city, addressRegion: site.address.region, addressCountry: site.address.country }, openingHoursSpecification };
 const businessSchema = { ...schema, ...(businessImage ? { image: new URL(businessImage, site.url).toString() } : {}) };
 ---
 <!doctype html>

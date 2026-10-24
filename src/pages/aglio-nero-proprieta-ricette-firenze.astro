@@ -15,7 +15,7 @@ const faqs = [
   { question: "Che sapore ha l’aglio nero?", answer: "Ha un sapore dolce, umami e poco pungente, con note che ricordano l’aceto balsamico, la frutta essiccata e il caramello." },
   { question: "Come si mangia l’aglio nero?", answer: "Si può mangiare direttamente oppure schiacciare e aggiungere a crostini, formaggi, pasta, risotti, carne, verdure e salse. Non è necessario cuocerlo." },
   { question: "Quali proprietà ha l’aglio nero?", answer: "Contiene composti fenolici e solforati, tra cui la S-allil-cisteina, ed è studiato soprattutto per la sua attività antiossidante. È un alimento e non sostituisce cure o indicazioni mediche." },
-  { question: "Dove comprare l’aglio nero a Firenze?", answer: "L’aglio nero è disponibile da ELENA – Bottega dei Sapori Toscani, in Via Masaccio 184 a Firenze. La disponibilità può variare: prima di passare è possibile telefonare alla Bottega." },
+  { question: "Dove comprare l’aglio nero a Firenze?", answer: `L’aglio nero è disponibile da ELENA – Bottega dei Sapori Toscani, in ${site.address.street}, ${site.address.postalCode} ${site.address.city} (${site.address.region}). La disponibilità può variare: prima di passare è possibile telefonare alla Bottega.` },
 ];
 const structuredData = [
   {
@@ -106,10 +106,10 @@ const structuredData = [
       </section>
 
       <h2>Dove trovare l’aglio nero a Firenze?</h2>
-      <p>L’aglio nero è disponibile anche da <strong>ELENA – Bottega dei Sapori Toscani</strong> a Firenze, in Via Masaccio 184.</p>
+      <p>L’aglio nero è disponibile anche da <strong>ELENA – Bottega dei Sapori Toscani</strong> a Firenze, in {site.address.street}, {site.address.postalCode} {site.address.city} ({site.address.region}).</p>
       <p>Lo abbiamo scelto perché ci piace far conoscere, accanto ai sapori della tradizione, anche prodotti particolari che possano offrire nuovi abbinamenti in cucina.</p>
       <p>Chi non lo ha mai provato può passare in Bottega e scoprire da vicino consistenza, sapore e possibili utilizzi. Consulta la pagina <a href="/dove-siamo/">Dove siamo</a> per orari, contatti e indicazioni.</p>
-      <address><strong>ELENA – Bottega dei Sapori Toscani</strong><br />Via Masaccio 184 · Firenze</address>
+      <address><strong>ELENA – Bottega dei Sapori Toscani</strong><br />{site.address.street}, {site.address.postalCode} {site.address.city} ({site.address.region})</address>
 
       <section class="faq article-faq" aria-labelledby="faq-title">
         <p class="eyebrow">Risposte in breve</p>
@@ -118,7 +118,7 @@ const structuredData = [
       </section>
 
       <aside class="article-cta">
-        <div><p class="eyebrow">In Bottega a Firenze</p><h2>Vuoi provarlo?</h2><p>Passa da ELENA – Bottega dei Sapori Toscani, Via Masaccio 184, Firenze.</p></div>
+        <div><p class="eyebrow">In Bottega a Firenze</p><h2>Vuoi provarlo?</h2><p>Passa da ELENA – Bottega dei Sapori Toscani, {site.address.street}, {site.address.postalCode} {site.address.city} ({site.address.region}).</p></div>
         <a class="button" href="/dove-siamo/">Scopri come arrivare</a>
       </aside>
       <p class="article-back"><a class="text-link" href="/">Torna alla homepage</a> · <a class="text-link" href="/prodotti/">Scopri i prodotti della Bottega</a></p>

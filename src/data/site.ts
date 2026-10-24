@@ -1,6 +1,7 @@
 ﻿export const site = {
   name: 'PANIFICIO ELENA – Bottega dei Sapori Toscani',
   url: 'https://bottegadielena.it',
+  mapsUrl: 'https://www.google.com/maps?cid=11883190092574391768',
   phone: '+39 327 003 4324',
   phoneHref: 'tel:+393270034324',
   email: 'info@bottegadielena.it',
@@ -15,12 +16,12 @@
     pecHref: 'mailto:elenasrls2024@pec.it',
   },
   address: {
-    street: 'Via Masaccio 16 R/B',
+    street: 'Via Masaccio 16 Rosso/B',
     postalCode: '50132',
     city: 'Firenze',
     region: 'FI',
     country: 'IT',
-    note: 'altezza civico 184',
+    note: 'Altezza Via Masaccio 184 nero',
   },
   hours: [
     { label: 'Lunedì–Venerdì', display: '7:30–14:00 / 16:00–19:30', days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], ranges: [{ opens: '07:30', closes: '14:00' }, { opens: '16:00', closes: '19:30' }] },
