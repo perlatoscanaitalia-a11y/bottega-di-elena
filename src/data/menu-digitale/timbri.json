@@ -1,0 +1,10 @@
+{
+  "vegetarian": {
+    "label": "VEGETARIAN",
+    "icon": "<path d=\"M20 4C10 3 3 7 4 14c.6 4.8 6.8 6 10 3 3-2.8 4-7 6-13Z\"/><path d=\"M3 21 14 10M7 17l-1-5M10 14l5 1\"/>"
+  },
+  "vegan": {
+    "label": "VEGAN",
+    "icon": "<path d=\"M12 22V12M12 15C5 15 3 11 3 6c6 0 9 3 9 9ZM12 11c0-6 3-9 9-9 0 6-3 9-9 9ZM7 22h10\"/>"
+  }
+}

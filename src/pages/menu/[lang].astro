@@ -1,0 +1,46 @@
+---
+import MenuLayout from '../../layouts/MenuLayout.astro';
+import MenuLanguages from '../../components/MenuLanguages.astro';
+import catalogo from '../../data/menu-digitale/catalogo.json';
+import { languages, copy, categoryNames, type Language } from '../../data/menu-digitale/lingue';
+import { site } from '../../data/site';
+import MenuDietStamp from '../../components/MenuDietStamp.astro';
+import { verifiedDietFor } from '../../data/menu-digitale/verifica-diete';
+export function getStaticPaths() { return languages.map(lang=>({params:{lang}})); }
+const lang = Astro.params.lang as Language;
+const t = copy[lang];
+const seoTitle = {it:'Schiacciate a Firenze',en:'Schiacciate in Florence',de:'Schiacciate in Florenz',fr:'Schiacciate à Florence'}[lang];
+const categories = [...catalogo.filter(c=>c.id!=='pane'), ...catalogo.filter(c=>c.id==='pane')];
+const schema = {'@context':'https://schema.org','@type':'Menu',name:t.title,inLanguage:lang,url:new URL(`/menu/${lang}/`,site.url),hasMenuSection:categories.map(c=>({'@type':'MenuSection',name:categoryNames[c.id][lang],hasMenuItem:c.products.map(p=>({'@type':'MenuItem',name:p.name,description:p.description[lang],image:new URL(p.image,site.url)}))}))};
+---
+<MenuLayout lang={lang} title={`${seoTitle} | ELENA · Bottega dei Sapori Toscani`} description={t.seo} path={`/menu/${lang}/`}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\u003c')}/>
+  <a class="skip" href="#catalogo">{t.menu}</a>
+  <header class="menu-header" id="top"><div class="shell header-row">
+    <a class="wordmark" href="/menu/">ELENA<span>Bottega dei Sapori Toscani</span></a>
+    <MenuLanguages current={lang} label={t.language}/>
+  </div></header>
+  <main>
+    <section class="menu-intro shell">
+      <div><p class="eyebrow">{t.eyebrow}</p><h1>{t.title}<span class="title-dot">.</span></h1><p class="intro-subtitle">{t.subtitle}</p></div>
+      <p class="intro-note">{t.intro}</p>
+    </section>
+    <div class="category-bar"><nav class="shell category-links" aria-label={t.categories}>
+      {categories.map(c=><a href={`#${c.id}`}>{categoryNames[c.id][lang]}</a>)}
+    </nav></div>
+    <div id="catalogo" class="shell catalogo">
+      {categories.map((category,index)=><section id={category.id} class="menu-category" aria-labelledby={`heading-${category.id}`}>
+        <div class="category-heading"><span class="category-number">{String(index+1).padStart(2,'0')}</span><h2 id={`heading-${category.id}`}>{categoryNames[category.id][lang]}</h2><span class="category-count">{String(category.products.length).padStart(2,'0')}</span></div>
+        <div class="product-grid">{category.products.map((product,i)=><article class="menu-product" id={product.id}>
+          <div class:list={['product-photo', {'has-diet-stamp': !!verifiedDietFor(product.id)}]}>
+            <img src={product.image} alt={product.name} width="1000" height="750" loading={index===0&&i<2?'eager':'lazy'} fetchpriority={index===0&&i===0?'high':'auto'} decoding="async"/>
+            {verifiedDietFor(product.id) && <MenuDietStamp diet={verifiedDietFor(product.id)!}/>}
+          </div>
+          <div class="product-copy"><h3>{product.name}</h3><p class="ingredient-label">{t.ingredients}</p><p>{product.description[lang]}</p></div>
+        </article>)}</div>
+      </section>)}
+    </div>
+    <aside class="allergy-note shell"><span aria-hidden="true">✳</span><p>{t.allergy}</p></aside>
+  </main>
+  <footer class="menu-footer"><div class="shell footer-row"><div class="wordmark">ELENA<span>Bottega dei Sapori Toscani</span></div><address>{site.address.street}<br/>{site.address.postalCode} {site.address.city}</address><a href="/">{t.back} ↗</a><a href="#top">↑ {t.top}</a></div></footer>
+</MenuLayout>

@@ -1,0 +1,7 @@
+.product-photo{position:relative}
+.product-photo.has-diet-stamp{padding-top:54px}
+.diet-stamp{position:absolute;top:10px;right:10px;z-index:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:36px;padding:6px 11px;border:2px solid #23613f;border-radius:7px;font:700 12px/1 Arial,sans-serif;letter-spacing:.055em;white-space:nowrap;box-shadow:0 2px 6px #12362020,inset 0 0 0 2px #ffffff30}
+.diet-stamp svg{width:21px;height:21px;flex:none}
+.diet-stamp-vegetarian{background:#23613f;color:#fff}
+.diet-stamp-vegan{background:#e2efcf;color:#1e5438;border-style:double;border-width:3px}
+@media(max-width:600px){.diet-stamp{font-size:12px;right:8px;top:8px;min-height:36px}.product-photo.has-diet-stamp{padding-top:52px}}

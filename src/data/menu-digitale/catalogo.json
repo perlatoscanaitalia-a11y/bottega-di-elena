@@ -1,0 +1,542 @@
+[
+  {
+    "id": "pane",
+    "name": "Pane",
+    "products": [
+      {
+        "id": "schiacciata-solo-olio",
+        "name": "Schiacciata solo olio",
+        "image": "/images/menu-digitale/schiacciata-solo-olio.jpg",
+        "description": {
+          "it": "Schiacciata toscana fragrante, dorata e soffice all'interno, preparata con olio d'oliva e un pizzico di sale. Semplice, gustosa e perfetta da sola o da farcire.",
+          "en": "Golden Tuscan schiacciata with olive oil and a pinch of salt, soft inside. Enjoy on its own or filled.",
+          "de": "Goldbraune toskanische Schiacciata mit Olivenöl und einer Prise Salz, innen weich. Zum pur Genießen oder Belegen.",
+          "fr": "Schiacciata toscane dorée et moelleuse à l’intérieur, préparée avec de l’huile d’olive et une pincée de sel. À déguster nature ou garnie."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/menus-glovo/products/2b2afc6a389de7a29e2ca809724d27b9613d182249095049575c0ebfa474ac9b"
+      }
+    ]
+  },
+  {
+    "id": "le-toscane",
+    "name": "Le Toscane",
+    "products": [
+      {
+        "id": "la-sbriciolona",
+        "name": "La Sbriciolona",
+        "image": "/images/menu-digitale/la-sbriciolona.jpg",
+        "description": {
+          "it": "Sbriciolona artigianale Scarpaccia del Casentino, pecorino Toscano e cipolla caramellata. Schiacciata artigianale del Forno Coverciano.",
+          "en": "Traditional Tuscan fennel salami from Scarpaccia in Casentino, Tuscan pecorino cheese and caramelized onions. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Handwerkliche Sbriciolona von Scarpaccia aus dem Casentino, toskanischer Pecorino und karamellisierte Zwiebeln. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Sbriciolona artisanale de Scarpaccia dans le Casentino, pecorino toscan et oignons caramélisés. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/42372500216/d95627fd-3976-4869-a586-2f1698758729.jpg"
+      },
+      {
+        "id": "la-classica",
+        "name": "La Classica",
+        "image": "/images/menu-digitale/la-classica.jpg",
+        "description": {
+          "it": "Prosciutto Crudo Toscano Scarpaccia del Casentino stagionato, pecorino Toscano e rucola fresca. Schiacciata artigianale del Forno Coverciano.",
+          "en": "Aged Tuscan cured ham from Scarpaccia in Casentino, Tuscan pecorino cheese and fresh rocket. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Gereifter toskanischer Rohschinken von Scarpaccia aus dem Casentino, toskanischer Pecorino und frischer Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Jambon cru toscan affiné de Scarpaccia dans le Casentino, pecorino toscan et roquette fraîche. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/d2005585-8f0e-499c-9256-0d430345f800.jpg"
+      },
+      {
+        "id": "la-salamina-toscana",
+        "name": "La Salamina Toscana",
+        "image": "/images/menu-digitale/la-salamina-toscana.jpg",
+        "description": {
+          "it": "Salame Toscano artigianale Scarpaccia del Casentino, pecorino Toscano e marmellata di fichi. Il tutto racchiuso nella fragrante schiacciata toscana con olio del Forno Coverciano.",
+          "en": "Traditional Tuscan salami from Scarpaccia in Casentino, Tuscan pecorino cheese and fig jam. All served in our fragrant Tuscan olive oil schiacciata from Forno Coverciano.",
+          "de": "Handwerkliche toskanische Salami von Scarpaccia aus dem Casentino, toskanischer Pecorino und Feigenkonfitüre. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Salami toscan artisanal de Scarpaccia dans le Casentino, pecorino toscan et confiture de figues. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/b7e1e38e-04b8-4119-8a57-0eb1e3edd7d4.jpg"
+      },
+      {
+        "id": "la-premiata",
+        "name": "La Premiata",
+        "image": "/images/menu-digitale/la-premiata.jpg",
+        "description": {
+          "it": "Prosciutto Crudo Toscano Scarpaccia del Casentino stagionato, gorgonzola cremoso e miele. Schiacciata artigianale del Forno Coverciano.",
+          "en": "Aged Tuscan cured ham from Scarpaccia in Casentino, creamy gorgonzola cheese and honey. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Gereifter toskanischer Rohschinken von Scarpaccia aus dem Casentino, cremiger Gorgonzola und Honig. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Jambon cru toscan affiné de Scarpaccia dans le Casentino, gorgonzola crémeux et miel. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/78bde9c2-065d-482a-bb06-56f275fabe14.jpg"
+      },
+      {
+        "id": "la-castellana",
+        "name": "La Castellana",
+        "image": "/images/menu-digitale/la-castellana-foto-utente.png",
+        "description": {
+          "it": "Prosciutto crudo Toscano Scarpaccia del Casentino, stracchino cremoso e rucola fresca. Il tutto racchiuso nella fragrante schiacciata toscana con olio del Forno Coverciano.",
+          "en": "Tuscan cured ham from Scarpaccia in Casentino, creamy stracchino cheese and fresh rocket. All served in our fragrant Tuscan olive oil schiacciata from Forno Coverciano.",
+          "de": "Toskanischer Rohschinken von Scarpaccia aus dem Casentino, cremiger Stracchino und frischer Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Jambon cru toscan de Scarpaccia dans le Casentino, stracchino crémeux et roquette fraîche. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "user-provided: Schiacciata rustica con prosciutto e rucola.png"
+      },
+      {
+        "id": "la-sbriciolona-golosa",
+        "name": "La Sbriciolona Golosa",
+        "image": "/images/menu-digitale/la-sbriciolona-golosa.jpg",
+        "description": {
+          "it": "Sbriciolona artigianale Scarpaccia del Casentino, stracciatella cremosa e melanzane grigliate. Schiacciata artigianale del Forno Coverciano.",
+          "en": "Traditional Tuscan fennel salami from Scarpaccia in Casentino, creamy stracciatella cheese and grilled aubergines. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Handwerkliche Sbriciolona von Scarpaccia aus dem Casentino, cremige Stracciatella und gegrillte Auberginen. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Sbriciolona artisanale de Scarpaccia dans le Casentino, stracciatella crémeuse et aubergines grillées. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/92031c7b-3862-4365-8162-410d849caeaf.jpg"
+      },
+      {
+        "id": "la-rustica-del-casentino",
+        "name": "La Rustica del Casentino",
+        "image": "/images/menu-digitale/la-rustica-del-casentino.jpg",
+        "description": {
+          "it": "Salame Toscano di Scarpaccia, pecorino toscano e cipolla caramellata. Schiacciata del Forno Coverciano.",
+          "en": "Tuscan salami from Scarpaccia, Tuscan pecorino cheese and caramelized onions. Schiacciata from Forno Coverciano.",
+          "de": "Toskanische Salami von Scarpaccia, toskanischer Pecorino und karamellisierte Zwiebeln. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Salami toscan de Scarpaccia, pecorino toscan et oignons caramélisés. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/816246c9-ccce-4b83-9194-3be87dfc0d26.jpg"
+      }
+    ]
+  },
+  {
+    "id": "le-vegetariane",
+    "name": "Le Vegetariane",
+    "products": [
+      {
+        "id": "la-mediterranea",
+        "name": "La Mediterranea",
+        "image": "/images/menu-digitale/la-mediterranea.jpg",
+        "description": {
+          "it": "Mozzarella fiordilatte, melanzane grigliate, pomodori secchi e rucola fresca. Schiacciata artigianale del Forno Coverciano.",
+          "en": "Fresh mozzarella, grilled eggplant, sun-dried tomatoes and fresh rocket. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Fior-di-latte-Mozzarella, gegrillte Auberginen, getrocknete Tomaten und frischer Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Mozzarella fior di latte, aubergines grillées, tomates séchées et roquette fraîche. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/e7c7b6ca-2295-4a41-b5c7-6f40612fa274.jpg"
+      },
+      {
+        "id": "la-stracciatella",
+        "name": "La Stracciatella",
+        "image": "/images/menu-digitale/la-stracciatella.jpg",
+        "description": {
+          "it": "Stracciatella cremosa, pomodoro fresco e rucola fresca. Schiacciata artigianale all'olio del Forno Coverciano.",
+          "en": "Creamy stracciatella cheese, fresh tomatoes and rocket. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Cremige Stracciatella, frische Tomaten und frischer Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Stracciatella crémeuse, tomates fraîches et roquette fraîche. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/546f724a-ab4d-47e1-a0bc-00e64b9bcbc9.jpg"
+      },
+      {
+        "id": "la-bufalina",
+        "name": "La Bufalina",
+        "image": "/images/menu-digitale/la-bufalina.jpg",
+        "description": {
+          "it": "Mozzarella di bufala di Battipaglia, pomodoro fresco e rucola fresca. Schiacciata artigianale all'olio del Forno Coverciano.",
+          "en": "Buffalo mozzarella from Battipaglia, fresh tomatoes and rocket. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Büffelmozzarella aus Battipaglia, frische Tomaten und frischer Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Mozzarella de bufflonne de Battipaglia, tomates fraîches et roquette fraîche. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/3ca63c4c-6b14-4390-8746-2b63ad47f3f0.jpg"
+      },
+      {
+        "id": "la-caprina",
+        "name": "La Caprina",
+        "image": "/images/menu-digitale/la-caprina.jpg",
+        "description": {
+          "it": "Formaggio di capra dal gusto intenso, pomodori secchi e rucola fresca. Schiacciata artigianale del Forno Coverciano.",
+          "en": "Goat cheese with a rich flavor, sun-dried tomatoes and fresh rocket. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Aromatischer Ziegenkäse, getrocknete Tomaten und frischer Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Fromage de chèvre au goût intense, tomates séchées et roquette fraîche. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/278744ca-48a2-4e5f-bb9d-76ff47081e28.jpg"
+      },
+      {
+        "id": "la-cecina",
+        "name": "La Cecina",
+        "image": "/images/menu-digitale/la-cecina.jpg",
+        "description": {
+          "it": "Cecina toscana di farina di ceci, melanzane grigliate e rucola fresca. Schiacciata artigianale all'olio del Forno Coverciano.",
+          "en": "Traditional Tuscan chickpea flatbread, grilled eggplant and fresh rocket. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Toskanische Cecina aus Kichererbsenmehl, gegrillte Auberginen und frischer Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Cecina toscane à la farine de pois chiches, aubergines grillées et roquette fraîche. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/91f1d42b-5aff-4f31-a7f5-7400fdd770c8.jpg"
+      },
+      {
+        "id": "la-ligure",
+        "name": "La Ligure",
+        "image": "/images/menu-digitale/la-ligure.jpg",
+        "description": {
+          "it": "Mozzarella fiordilatte, pesto alla genovese, pomodoro fresco e rucola fresca. Schiacciata artigianale all'olio del Forno Coverciano.",
+          "en": "Fior di latte mozzarella, traditional Genoese basil pesto, fresh tomatoes and rocket. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Fior-di-latte-Mozzarella, Pesto alla genovese, frische Tomaten und frischer Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Mozzarella fior di latte, pesto à la génoise, tomates fraîches et roquette fraîche. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/67ed924e-85ea-43d9-881e-b90ae0ba4dca.jpg"
+      }
+    ]
+  },
+  {
+    "id": "le-vegane",
+    "name": "Le Vegane",
+    "products": [
+      {
+        "id": "l-ortolana",
+        "name": "L'Ortolana",
+        "image": "/images/menu-digitale/l-ortolana.jpg",
+        "description": {
+          "it": "Melanzane grigliate, pomodori secchi, pomodoro fresco e rucola fresca. Schiacciata artigianale all'olio del Forno Coverciano.",
+          "en": "Grilled eggplant, sun-dried tomatoes, fresh tomatoes and rocket. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Gegrillte Auberginen, getrocknete Tomaten, frische Tomaten und frischer Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Aubergines grillées, tomates séchées, tomates fraîches et roquette fraîche. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/e6369e00-35af-4354-ac03-9390e8290a96.jpg"
+      },
+      {
+        "id": "l-avocado",
+        "name": "L’Avocado",
+        "image": "/images/menu-digitale/l-avocado.jpg",
+        "description": {
+          "it": "Avocado, melanzane grigliate, pomodoro fresco e rucola fresca. Schiacciata artigianale all'olio del Forno Coverciano.",
+          "en": "Avocado, grilled eggplant, fresh tomatoes and rocket. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Avocado, gegrillte Auberginen, frische Tomaten und frischer Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Avocat, aubergines grillées, tomates fraîches et roquette fraîche. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/3aef4eb9-1880-4f46-a92a-231d372ba355.jpg"
+      }
+    ]
+  },
+  {
+    "id": "le-speciali",
+    "name": "Le Speciali",
+    "products": [
+      {
+        "id": "la-bresaola",
+        "name": "La Bresaola",
+        "image": "/images/menu-digitale/la-bresaola.jpg",
+        "description": {
+          "it": "Bresaola Punta d'Anca della Valtellina, pecorino Toscano e rucola fresca. Schiacciata artigianale del Forno Coverciano.",
+          "en": "Premium Valtellina beef bresaola, made from the finest top round cut, Tuscan pecorino cheese and fresh rocket. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Bresaola Punta d’Anca aus dem Veltlin, toskanischer Pecorino und frischer Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Bresaola Punta d’Anca de la Valteline, pecorino toscan et roquette fraîche. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/d851613d-b114-4015-9724-2953adda1ceb.jpg"
+      },
+      {
+        "id": "la-burrata",
+        "name": "La Burrata",
+        "image": "/images/menu-digitale/la-burrata.jpg",
+        "description": {
+          "it": "Prosciutto Crudo Toscano Scarpaccia del Casentino stagionato, burrata cremosa, pomodoro fresco e rucola. Serviti in fragrante schiacciata toscana all'olio del Forno Coverciano.",
+          "en": "Aged Tuscan cured ham from Scarpaccia del Casentino, creamy burrata, fresh tomato and rocket. Served in crispy Tuscan olive oil flatbread from Forno Coverciano.",
+          "de": "Gereifter toskanischer Rohschinken von Scarpaccia aus dem Casentino, cremige Burrata, frische Tomaten und Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Jambon cru toscan affiné de Scarpaccia dans le Casentino, burrata crémeuse, tomates fraîches et roquette. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/013afec4-7299-4916-8b83-08830f11389a.jpg"
+      },
+      {
+        "id": "la-galantina",
+        "name": "La Galantina",
+        "image": "/images/menu-digitale/la-galantina.jpg",
+        "description": {
+          "it": "Galantina di pollo dei Medicei, pecorino Toscano e rucola fresca. Servita in fragrante schiacciata toscana all'olio del Forno Coverciano.",
+          "en": "Medicei chicken galantine, Tuscan pecorino cheese and fresh rocket. Served in crispy Tuscan olive oil flatbread from Forno Coverciano.",
+          "de": "Hühnergalantine von Medicei, toskanischer Pecorino und frischer Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Galantine de poulet des Medicei, pecorino toscan et roquette fraîche. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/65a1f51c-c3a8-4813-ac01-cf73dfb98601.jpg"
+      },
+      {
+        "id": "la-battipaglia",
+        "name": "La Battipaglia",
+        "image": "/images/menu-digitale/la-battipaglia.jpg",
+        "description": {
+          "it": "Prosciutto Crudo Toscano Scarpaccia del Casentino, mozzarella di bufala di Battipaglia, pomodoro fresco e rucola. Schiacciata artigianale del Forno Coverciano.",
+          "en": "Tuscan cured ham from Scarpaccia in Casentino, buffalo mozzarella from Battipaglia, fresh tomato and rocket. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Toskanischer Rohschinken von Scarpaccia aus dem Casentino, Büffelmozzarella aus Battipaglia, frische Tomaten und Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Jambon cru toscan de Scarpaccia dans le Casentino, mozzarella de bufflonne de Battipaglia, tomates fraîches et roquette. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/83b48426-2a23-4316-98e2-5684005da259.jpg"
+      }
+    ]
+  },
+  {
+    "id": "pastrami",
+    "name": "Pastrami",
+    "products": [
+      {
+        "id": "pastrami-cheddar-melt",
+        "name": "Pastrami Cheddar Melt",
+        "image": "/images/menu-digitale/pastrami-cheddar-melt-croccante.png",
+        "description": {
+          "it": "Pastrami di vitello, cheddar, cetriolini, cipolla caramellata e salsa alla senape, nella schiacciata del Forno Coverciano.",
+          "en": "Veal pastrami, cheddar, pickles, caramelized onion and mustard sauce, served in schiacciata from Forno Coverciano.",
+          "de": "Kalbspastrami, Cheddar, Gewürzgurken, karamellisierte Zwiebeln und Senfsauce. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Pastrami de veau, cheddar, cornichons, oignons caramélisés et sauce à la moutarde. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "user-provided: Pastrami Cheddar Melt Croccante.png"
+      },
+      {
+        "id": "pastrami-fresh",
+        "name": "Pastrami Fresh",
+        "image": "/images/menu-digitale/pastrami-fresh.jpg",
+        "description": {
+          "it": "Pastrami di vitello, pomodoro fresco, rucola, cetriolini e senape. Il tutto racchiuso nella fragrante schiacciata toscana all'olio del Forno Coverciano.",
+          "en": "Veal pastrami, fresh tomatoes, rocket, pickles and mustard. All wrapped in our fragrant Tuscan olive oil schiacciata from Forno Coverciano.",
+          "de": "Kalbspastrami, frische Tomaten, Rucola, Gewürzgurken und Senf. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Pastrami de veau, tomates fraîches, roquette, cornichons et moutarde. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/42372500462/e4bdc372-dea2-4330-8fd9-63cac61d2816.jpg"
+      }
+    ]
+  },
+  {
+    "id": "le-classiche",
+    "name": "Le Classiche",
+    "products": [
+      {
+        "id": "la-delicata",
+        "name": "La Delicata",
+        "image": "/images/menu-digitale/la-delicata.jpg",
+        "description": {
+          "it": "Tacchino arrosto, stracciatella cremosa e rucola fresca. Il tutto racchiuso nella fragrante schiacciata toscana con olio del Forno Coverciano.",
+          "en": "Roasted turkey, creamy stracciatella cheese and fresh rocket. All served in our fragrant Tuscan olive oil schiacciata from Forno Coverciano.",
+          "de": "Gebratener Truthahn, cremige Stracciatella und frischer Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Dinde rôtie, stracciatella crémeuse et roquette fraîche. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/70ccae30-f007-45e7-a437-c3abc150e05c.jpg"
+      },
+      {
+        "id": "cotto-gran-biscotto-fontina",
+        "name": "Cotto Gran Biscotto Rovagnati & Fontina",
+        "image": "/images/menu-digitale/cotto-gran-biscotto-fontina.jpg",
+        "description": {
+          "it": "Prosciutto cotto Gran Biscotto Rovagnati e fontina filante. Il tutto racchiuso nella fragrante schiacciata toscana all'olio del Forno Coverciano.",
+          "en": "Gran Biscotto Rovagnati cooked ham and melted Fontina cheese. All wrapped in our fragrant Tuscan olive oil schiacciata from Forno Coverciano.",
+          "de": "Kochschinken Gran Biscotto Rovagnati und geschmolzener Fontina. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Jambon cuit Gran Biscotto Rovagnati et fontina fondante. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/afe802be-b52b-4551-a28b-7f2bb31f0ae3.jpg"
+      },
+      {
+        "id": "crudo-mozzarella",
+        "name": "Crudo & Mozzarella",
+        "image": "/images/menu-digitale/crudo-mozzarella.jpg",
+        "description": {
+          "it": "Prosciutto crudo Toscano, mozzarella fiordilatte e rucola fresca. Il tutto racchiuso nella fragrante schiacciata toscana con olio del Forno Coverciano.",
+          "en": "Tuscan cured ham, fresh mozzarella and rocket. All served in our fragrant Tuscan olive oil schiacciata from Forno Coverciano.",
+          "de": "Toskanischer Rohschinken, Fior-di-latte-Mozzarella und frischer Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Jambon cru toscan, mozzarella fior di latte et roquette fraîche. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/7d3b1023-59c8-43dd-b60b-4c9993dec959.jpg"
+      }
+    ]
+  },
+  {
+    "id": "schiacciate-semplici",
+    "name": "Schiacciate Semplici",
+    "products": [
+      {
+        "id": "gran-biscotto-semplice",
+        "name": "Gran Biscotto Rovagnati Semplice",
+        "image": "/images/menu-digitale/gran-biscotto-semplice.jpg",
+        "description": {
+          "it": "Prosciutto cotto alta qualità Gran Biscotto Rovagnati. Schiacciata Forno Coverciano.",
+          "en": "Gran Biscotto Rovagnati high-quality cooked ham. Schiacciata bread from Forno Coverciano.",
+          "de": "Hochwertiger Kochschinken Gran Biscotto Rovagnati. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Jambon cuit de qualité supérieure Gran Biscotto Rovagnati. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/1ae46e9c-8f76-49e3-9481-893447a56ba8.jpg"
+      },
+      {
+        "id": "crudo-toscano-semplice",
+        "name": "Crudo Toscano Semplice",
+        "image": "/images/menu-digitale/crudo-toscano-semplice.jpg",
+        "description": {
+          "it": "Prosciutto Crudo Toscano di Scarpaccia del Casentino. Schiacciata Forno Coverciano.",
+          "en": "Tuscan cured ham from Scarpaccia in the Casentino area. Schiacciata bread from Forno Coverciano.",
+          "de": "Toskanischer Rohschinken von Scarpaccia aus dem Casentino. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Jambon cru toscan de Scarpaccia dans le Casentino. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/ebaf9b5d-1a57-41fc-9efc-130125504bf6.jpg"
+      },
+      {
+        "id": "sbriciolona-scarpaccia-top-semplice",
+        "name": "Sbriciolona Scarpaccia TOP Semplice",
+        "image": "/images/menu-digitale/sbriciolona-scarpaccia-top-semplice.jpg",
+        "description": {
+          "it": "Sbriciolona di Scarpaccia del Casentino. Schiacciata Forno Coverciano. Semplice",
+          "en": "Tuscan Sbriciolona salami from Scarpaccia in the Casentino area. Schiacciata bread from Forno Coverciano",
+          "de": "Sbriciolona von Scarpaccia aus dem Casentino. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Sbriciolona de Scarpaccia dans le Casentino. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/4a703188-2a9c-48ee-a3d6-017e3b0d0c91.jpg"
+      },
+      {
+        "id": "galantina-semplice",
+        "name": "Galantina Semplice",
+        "image": "/images/menu-digitale/galantina-semplice.jpg",
+        "description": {
+          "it": "Galantina di pollo. Schiacciata Forno Coverciano.",
+          "en": "Chicken galantine. Schiacciata bread from Forno Coverciano",
+          "de": "Hühnergalantine. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Galantine de poulet. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/03f359b4-b523-48db-a01f-f28c44effde5.jpg"
+      },
+      {
+        "id": "tacchino-arrosto-semplice",
+        "name": "Tacchino Arrosto Semplice",
+        "image": "/images/menu-digitale/tacchino-arrosto-semplice.jpg",
+        "description": {
+          "it": "Tacchino arrosto. Schiacciata Forno Coverciano.",
+          "en": "Roast turkey. Schiacciata bread from Forno Coverciano.",
+          "de": "Gebratener Truthahn. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Dinde rôtie. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/6b116f19-195c-4c79-9c66-eb8f38b5dfcf.jpg"
+      },
+      {
+        "id": "bresaola-semplice",
+        "name": "Bresaola Semplice",
+        "image": "/images/menu-digitale/bresaola-semplice.jpg",
+        "description": {
+          "it": "Bresaola e schiacciata Forno Coverciano.",
+          "en": "Bresaola and Forno Coverciano schiacciata.",
+          "de": "Bresaola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Bresaola. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/e3aba31b-b4e6-4bb0-8692-3c767fc47224.jpg"
+      },
+      {
+        "id": "pastrami-semplice",
+        "name": "Pastrami Semplice",
+        "image": "/images/menu-digitale/pastrami-semplice.jpg",
+        "description": {
+          "it": "Pastrami di vitello e schiacciata Forno Coverciano.",
+          "en": "Veal pastrami and Forno Coverciano schiacciata.",
+          "de": "Kalbspastrami. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Pastrami de veau. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/4ff2eb97-3de4-46c7-a08f-e72b1dd33c3c.jpg"
+      }
+    ]
+  },
+  {
+    "id": "le-mortadelle-d-eccellenza",
+    "name": "Le Mortadelle d'Eccellenza",
+    "products": [
+      {
+        "id": "mortadella-al-tartufo-semplice",
+        "name": "Mortadella al Tartufo Semplice",
+        "image": "/images/menu-digitale/mortadella-al-tartufo-semplice.jpg",
+        "description": {
+          "it": "Mortadella al tartufo dal gusto delicato e dal profumo intenso. Servita in fragrante schiacciata toscana all'olio del Forno Coverciano.",
+          "en": "Truffle mortadella with a delicate taste and rich aroma. Served in crispy Tuscan olive oil flatbread from Forno Coverciano.",
+          "de": "Trüffelmortadella mit mildem Geschmack und intensivem Aroma. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Mortadelle à la truffe au goût délicat et au parfum intense. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/e3bac4b7-3284-4d2c-aaf9-aa57a9fdbd19.jpg"
+      },
+      {
+        "id": "favola-semplice-miglior-mortadella-d-italia",
+        "name": "Favola Semplice – Miglior Mortadella d'Italia",
+        "image": "/images/menu-digitale/favola-semplice-miglior-mortadella-d-italia.jpg",
+        "description": {
+          "it": "Mortadella Favola Palmieri Gran Riserva, premiata come Miglior Mortadella d'Italia. Servita in fragrante schiacciata toscana all'olio del Forno Coverciano.",
+          "en": "Favola Palmieri Gran Riserva mortadella, awarded Best Mortadella in Italy. Served in crispy Tuscan olive oil flatbread from Forno Coverciano.",
+          "de": "Mortadella Favola Palmieri Gran Riserva, als beste Mortadella Italiens ausgezeichnet. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Mortadelle Favola Palmieri Gran Riserva, récompensée comme meilleure mortadelle d’Italie. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/873d6210-e5f1-48ce-bc9e-32370fee0a9a.jpg"
+      },
+      {
+        "id": "la-tartufina-lilly",
+        "name": "La Tartufina – Lilly",
+        "image": "/images/menu-digitale/la-tartufina-lilly.jpg",
+        "description": {
+          "it": "Dedicata alla nostra amica Lilly, che al tartufo non sa proprio resistere! Mortadella al tartufo, burrata cremosa e scaglie di tartufo, nella fragrante schiacciata toscana del Forno Coverciano.",
+          "en": "Dedicated to our friend Lilly, who simply cannot resist truffles! Truffle mortadella, creamy burrata and truffle shavings in our crispy Tuscan flatbread from Forno Coverciano.",
+          "de": "Unserer Freundin Lilly gewidmet, die Trüffeln einfach nicht widerstehen kann! Trüffelmortadella, cremige Burrata und Trüffelspäne. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Dédiée à notre amie Lilly, qui ne résiste jamais à la truffe ! Mortadelle à la truffe, burrata crémeuse et copeaux de truffe. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/42373729949/b6833ff3-0c40-415b-a8a5-c0cfd71cb260.jpg"
+      },
+      {
+        "id": "mortadella-al-tartufo-e-stracciatella",
+        "name": "Mortadella al Tartufo e Stracciatella",
+        "image": "/images/menu-digitale/mortadella-al-tartufo-e-stracciatella.jpg",
+        "description": {
+          "it": "Mortadella Favola al Tartufo Palmieri, stracciatella cremosa e crema di funghi tartufata. Un incontro di sapori raffinati nella fragrante schiacciata toscana all'olio del Forno Coverciano.",
+          "en": "Palmieri Favola Truffle Mortadella, creamy stracciatella cheese and truffle mushroom cream. A delicious combination served in crispy Tuscan olive oil flatbread from Forno Coverciano.",
+          "de": "Mortadella Favola al Tartufo von Palmieri, cremige Stracciatella und getrüffelte Pilzcreme. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Mortadelle Favola à la truffe Palmieri, stracciatella crémeuse et crème de champignons à la truffe. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/193f566c-2939-49a6-8eb5-4771d25ba471.jpg"
+      },
+      {
+        "id": "la-favola-miglior-mortadella-d-italia",
+        "name": "La Favola – Miglior Mortadella d'Italia",
+        "image": "/images/menu-digitale/la-favola-miglior-mortadella-d-italia.jpg",
+        "description": {
+          "it": "Mortadella Favola gran Riserva -La Miglior Mortadella d'Italia, stracciatella e granella di pistacchio, nella schiacciata del Forno Coverciano.",
+          "en": "Mortadella, stracciatella cheese and chopped pistachios, served in schiacciata from Forno Coverciano.",
+          "de": "Mortadella Favola Gran Riserva, als beste Mortadella Italiens ausgezeichnet, mit Stracciatella und gehackten Pistazien. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Mortadelle Favola Gran Riserva, récompensée comme meilleure mortadelle d’Italie, stracciatella et éclats de pistache. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/6cd8d821-4b1b-449a-9847-a81833798a9b.jpg"
+      },
+      {
+        "id": "la-genovese-miglior-mortadella-d-italia",
+        "name": "La Genovese – Miglior Mortadella d'Italia",
+        "image": "/images/menu-digitale/la-genovese-miglior-mortadella-d-italia.jpg",
+        "description": {
+          "it": "Mortadella Favola Palmieri Gran Riserva, premiata come miglior mortadella d'Italia, stracciatella cremosa e pesto alla genovese. Schiacciata artigianale del Forno Coverciano.",
+          "en": "Mortadella Favola Palmieri Gran Riserva, awarded Best Mortadella in Italy, creamy stracciatella cheese and Genoese basil pesto. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Mortadella Favola Palmieri Gran Riserva, als beste Mortadella Italiens ausgezeichnet, cremige Stracciatella und Pesto alla genovese. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Mortadelle Favola Palmieri Gran Riserva, récompensée comme meilleure mortadelle d’Italie, stracciatella crémeuse et pesto à la génoise. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/a59f46cc-2628-45b7-bc32-f4518e45d741.jpg"
+      }
+    ]
+  },
+  {
+    "id": "schiacciate-tonno",
+    "name": "Schiacciate - Tonno",
+    "products": [
+      {
+        "id": "la-tonnata",
+        "name": "La Tonnata",
+        "image": "/images/menu-digitale/la-tonnata.jpg",
+        "description": {
+          "it": "Tonno, pomodoro fresco, rucola e maionese cremosa. Schiacciata artigianale all'olio del Forno Coverciano.",
+          "en": "Tuna, fresh tomatoes, rocket and creamy mayonnaise. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Thunfisch, frische Tomaten, Rucola und cremige Mayonnaise. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Thon, tomates fraîches, roquette et mayonnaise onctueuse. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/d8248864-4ba1-4e8c-89f2-deb6a9e20514.jpg"
+      },
+      {
+        "id": "tonno-avocado",
+        "name": "Tonno & Avocado",
+        "image": "/images/menu-digitale/tonno-avocado.jpg",
+        "description": {
+          "it": "Tonno, avocado, pomodoro fresco e rucola fresca. Schiacciata artigianale all'olio del Forno Coverciano.",
+          "en": "Tuna, avocado, fresh tomatoes and rocket. Artisan Tuscan flatbread from Forno Coverciano.",
+          "de": "Thunfisch, Avocado, frische Tomaten und frischer Rucola. In handwerklicher Schiacciata vom Forno Coverciano.",
+          "fr": "Thon, avocat, tomates fraîches et roquette fraîche. Dans une schiacciata artisanale du Forno Coverciano."
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/4d2db2f3-0718-4994-8722-1525180a7098.jpg"
+      }
+    ]
+  }
+]

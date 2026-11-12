@@ -1,0 +1,23 @@
+---
+import '../styles/menu-digitale.css';
+import { languages, type Language } from '../data/menu-digitale/lingue';
+interface Props { lang?: Language; title: string; description: string; path: string; }
+const {lang = 'it', title, description, path} = Astro.props;
+const origin = Astro.site ?? new URL('https://bottegadielena.it');
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{title}</title><meta name="description" content={description}/>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+    <link rel="canonical" href={new URL(path,origin)}/>
+    {languages.map(code=><link rel="alternate" hreflang={code} href={new URL(`/menu/${code}/`,origin)}/>)}
+    <link rel="alternate" hreflang="x-default" href={new URL('/menu/',origin)}/>
+    <meta property="og:type" content="website"/><meta property="og:title" content={title}/>
+    <meta property="og:description" content={description}/><meta property="og:url" content={new URL(path,origin)}/>
+    <meta name="theme-color" content="#254d3d"/>
+    <link rel="stylesheet" href="/menu-assets/timbri.css"/>
+  </head>
+  <body><slot/></body>
+</html>

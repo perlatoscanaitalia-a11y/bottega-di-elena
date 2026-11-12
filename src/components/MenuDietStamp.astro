@@ -1,0 +1,11 @@
+---
+import stamps from '../data/menu-digitale/timbri.json';
+import type { Diet } from '../data/menu-digitale/verifica-diete';
+interface Props { diet: Diet; }
+const { diet } = Astro.props;
+const stamp = stamps[diet];
+---
+<span class:list={['diet-stamp', `diet-stamp-${diet}`]}>
+  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={stamp.icon}/>
+  <span>{stamp.label}</span>
+</span>

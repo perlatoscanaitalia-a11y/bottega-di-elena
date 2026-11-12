@@ -1,0 +1,20 @@
+---
+import MenuLayout from '../../layouts/MenuLayout.astro';
+import MenuLanguages from '../../components/MenuLanguages.astro';
+import catalogo from '../../data/menu-digitale/catalogo.json';
+const hero = catalogo.find(c=>c.id==='le-toscane')!.products[0];
+---
+<MenuLayout title="Menù schiacciate | ELENA · Firenze" description="Il catalogo fotografico delle schiacciate di ELENA, Bottega dei Sapori Toscani a Firenze. Scegli italiano, inglese, tedesco o francese." path="/menu/">
+  <main class="language-page">
+    <div class="language-photo"><img src={hero.image} alt="La Sbriciolona" width="1000" height="750" fetchpriority="high"/></div>
+    <section class="language-welcome">
+      <a class="wordmark" href="/">ELENA<span>Bottega dei Sapori Toscani</span></a>
+      <p class="eyebrow">Firenze · Dal cuore della bottega</p>
+      <h1>La Toscana,<br/><em>in una schiacciata.</em></h1>
+      <p class="choose">Scegli la lingua <span>Choose your language</span></p>
+      <MenuLanguages large/>
+      <p class="small-language">Sprache wählen · Choisissez votre langue</p>
+      <a class="back-link" href="/">bottegadielena.it ↗</a>
+    </section>
+  </main>
+</MenuLayout>
