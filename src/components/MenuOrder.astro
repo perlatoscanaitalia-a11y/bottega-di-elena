@@ -1,0 +1,35 @@
+---
+import { site } from '../data/site';
+import { mortadellaChannels } from '../data/mortadella';
+import { orderCopy, formatOrder, whatsappHref } from '../data/menu-digitale/ordini';
+import type { Language } from '../data/menu-digitale/lingue';
+interface Props { product:{id:string;name:string}; lang:Language; ingredients:{id:string;label:string}[]; }
+const {product,lang,ingredients}=Astro.props;
+const t=orderCopy[lang];
+const initial=formatOrder({name:product.name,quantity:1,removed:[],additions:'',substitutions:'',notes:''},lang);
+---
+<div class="menu-order" data-order data-product={product.name} data-language={lang} data-phone={site.phone}>
+  <div class="personalization" data-personalization hidden>
+    <div class="quantity-row"><label for={`qty-${product.id}`}>{t.quantity}</label><input id={`qty-${product.id}`} data-quantity type="number" inputmode="numeric" min="1" max="50" step="1" value="1" required aria-describedby={`quantity-error-${product.id}`}/></div>
+    <p class="quantity-error" id={`quantity-error-${product.id}`} data-quantity-error hidden>{t.invalidQuantity}</p>
+    <details class="customizer">
+      <summary><span>{t.customize}</span><span class="custom-count" data-custom-count hidden aria-label={t.customizations}></span><span class="summary-plus" aria-hidden="true">+</span></summary>
+      <div class="customizer-fields">
+        <fieldset><legend>{t.remove}</legend><p class="field-hint">{t.removeHint}</p><div class="remove-options">{ingredients.map(ingredient=><label><input type="checkbox" data-remove value={ingredient.label}/><span>{ingredient.label}</span></label>)}</div></fieldset>
+        <label for={`add-${product.id}`}>{t.add}</label><textarea id={`add-${product.id}`} data-additions maxlength="300" rows="2" placeholder={t.addHint}></textarea>
+        <label for={`swap-${product.id}`}>{t.swap}</label><textarea id={`swap-${product.id}`} data-substitutions maxlength="300" rows="2" placeholder={t.swapHint}></textarea>
+        <label for={`note-${product.id}`}>{t.notes}</label><textarea id={`note-${product.id}`} data-notes maxlength="500" rows="3" placeholder={t.notesHint}></textarea>
+        <button class="reset-custom" data-reset type="button">{t.reset}</button>
+        <p class="field-hint">{t.channels}</p>
+      </div>
+    </details>
+  </div>
+  <div class="order-buttons">
+    <a class="order-deliveroo" href={mortadellaChannels.deliveroo} target="_blank" rel="noopener noreferrer">{t.deliveroo}<span aria-hidden="true">↗</span></a>
+    <a class="order-glovo" href={mortadellaChannels.glovo} target="_blank" rel="noopener noreferrer">{t.glovo}<span aria-hidden="true">↗</span></a>
+    <a class="order-whatsapp" data-whatsapp href={whatsappHref(site.phone,initial)} target="_blank" rel="noopener noreferrer">{t.whatsapp}<span aria-hidden="true">↗</span></a>
+  </div>
+  <p class="supplement-note">{t.supplements}</p>
+  <details class="message-preview" data-message-panel hidden><summary>{t.preview}</summary><pre data-message-preview>{initial}</pre></details>
+  <noscript><p class="supplement-note">{t.noScript}</p></noscript>
+</div>

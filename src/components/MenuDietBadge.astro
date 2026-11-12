@@ -1,0 +1,12 @@
+---
+import type { Diet } from '../data/menu-digitale/verifica-diete';
+import type { Language } from '../data/menu-digitale/lingue';
+interface Props { diet: Diet; lang: Language }
+const {diet,lang}=Astro.props;
+const labels={it:{vegetarian:'VEGETARIAN',vegan:'VEGAN'},en:{vegetarian:'VEGETARIAN',vegan:'VEGAN'},de:{vegetarian:'VEGETARISCH',vegan:'VEGAN'},fr:{vegetarian:'VÉGÉTARIEN',vegan:'VÉGAN'}};
+---
+<span class:list={['menu-diet-badge',diet]}><span aria-hidden="true">{diet==='vegetarian'?'🌱':'🌿'}</span>{labels[lang][diet]}</span>
+<style>
+.menu-diet-badge{display:inline-flex;align-items:center;gap:5px;border:1px solid #506039;border-radius:999px;padding:5px 9px;font:700 11px/1.3 Arial,sans-serif;letter-spacing:.04em;vertical-align:middle;white-space:nowrap;color:#fff;background:#506039}
+.menu-diet-badge.vegan{border-color:#24513b;background:#24513b}
+</style>
