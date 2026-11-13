@@ -1,5 +1,6 @@
 ﻿---
 import '../styles/global.css';
+import Favicon from '../components/Favicon.astro';
 import { site } from '../data/site';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -49,10 +50,7 @@ const businessSchema = { ...schema, ...(businessImage ? { image: new URL(busines
     <meta name="robots" content={robots} />
     <link rel="canonical" href={canonical} />
     {preloadImage && socialImage && <link rel="preload" as="image" href={socialImage} fetchpriority="high" />}
-    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
-    <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <Favicon />
     <meta property="og:type" content={ogType} />
     <meta property="og:locale" content="it_IT" />
     <meta property="og:site_name" content={site.name} />
