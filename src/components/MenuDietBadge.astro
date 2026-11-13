@@ -3,7 +3,7 @@ import type { Diet } from '../data/menu-digitale/verifica-diete';
 import type { Language } from '../data/menu-digitale/lingue';
 interface Props { diet: Diet; lang: Language }
 const {diet,lang}=Astro.props;
-const labels={it:{vegetarian:'VEGETARIAN',vegan:'VEGAN'},en:{vegetarian:'VEGETARIAN',vegan:'VEGAN'},de:{vegetarian:'VEGETARISCH',vegan:'VEGAN'},fr:{vegetarian:'VÉGÉTARIEN',vegan:'VÉGAN'}};
+const labels={it:{vegetarian:'VEGETARIAN',vegan:'VEGAN'},en:{vegetarian:'VEGETARIAN',vegan:'VEGAN'},de:{vegetarian:'VEGETARISCH',vegan:'VEGAN'},fr:{vegetarian:'VÉGÉTARIEN',vegan:'VÉGAN'},es:{vegetarian:'VEGETARIANO',vegan:'VEGANO'},zh:{vegetarian:'素食',vegan:'纯素'},ja:{vegetarian:'ベジタリアン',vegan:'ヴィーガン'}};
 ---
 <span class:list={['menu-diet-badge',diet]}><span aria-hidden="true">{diet==='vegetarian'?'🌱':'🌿'}</span>{labels[lang][diet]}</span>
 <style>

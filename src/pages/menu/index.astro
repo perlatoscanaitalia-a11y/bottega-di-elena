@@ -1,20 +1,44 @@
 ---
 import MenuLayout from '../../layouts/MenuLayout.astro';
 import MenuLanguages from '../../components/MenuLanguages.astro';
-import catalogo from '../../data/menu-digitale/catalogo.json';
-const hero = catalogo.find(c=>c.id==='le-toscane')!.products[0];
 ---
-<MenuLayout title="Menù schiacciate | ELENA · Firenze" description="Il catalogo fotografico delle schiacciate di ELENA, Bottega dei Sapori Toscani a Firenze. Scegli italiano, inglese, tedesco o francese." path="/menu/">
+<MenuLayout title="Menù schiacciate | ELENA · Firenze" description="Il catalogo fotografico delle schiacciate di ELENA, Bottega dei Sapori Toscani a Firenze. Scegli tra sette lingue: italiano, inglese, tedesco, francese, spagnolo, cinese semplificato e giapponese." path="/menu/">
   <main class="language-page">
-    <div class="language-photo"><img src={hero.image} alt="La Sbriciolona" width="1000" height="750" fetchpriority="high"/></div>
+    <div class="language-photo"><img src="/images/menu-digitale/elena-menu-benvenuto-originale.png" alt="Schiacciata della bottega con il marchio ELENA sullo sfondo" width="412" height="212" fetchpriority="high"/></div>
     <section class="language-welcome">
       <a class="wordmark" href="/">ELENA<span>Bottega dei Sapori Toscani</span></a>
       <p class="eyebrow">Firenze · Dal cuore della bottega</p>
       <h1>La Toscana,<br/><em>in una schiacciata.</em></h1>
-      <p class="choose">Scegli la lingua <span>Choose your language</span></p>
-      <MenuLanguages large/>
-      <p class="small-language">Sprache wählen · Choisissez votre langue</p>
+      <div class="language-choice">
+        <p class="choose">Scegli la lingua <span>Choose your language</span></p>
+        <MenuLanguages large/>
+        <p class="small-language">Sprache wählen · Choisissez votre langue<br/>Elige tu idioma · 选择语言 · 言語を選択</p>
+      </div>
       <a class="back-link" href="/">bottegadielena.it ↗</a>
     </section>
   </main>
 </MenuLayout>
+
+<style>
+  .language-welcome .wordmark{font-size:52px}
+  .language-photo{overflow:hidden}
+  .language-photo img{width:112%;max-width:none;flex-shrink:0}
+  .language-choice .small-language{font-size:13px;line-height:1.8;color:#53604c}
+  .language-welcome .back-link{font-size:13px;line-height:1.6}
+  .language-choice{width:100%;max-width:480px;align-self:center;text-align:center}
+  .language-choice .choose{font-size:18px;margin-bottom:23px}
+  .language-choice .choose span{font-size:14px}
+  .language-choice :global(.languages-large){max-width:none;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .language-choice :global(.languages-large a){min-width:0;min-height:56px;padding:21px 14px;justify-content:center;gap:12px;font-size:21px;line-height:1.3}
+  .language-choice :global(.languages-large .flag){width:36px;height:24px}
+  .language-choice :global(.languages-large a:last-child){grid-column:1/-1;width:calc((100% - 14px)/2);justify-self:center}
+  @media(max-width:600px){
+    .language-welcome .wordmark{font-size:40px}
+    .language-choice :global(.languages-large a){padding:18px 10px;font-size:20px;gap:10px}
+    .language-choice :global(.languages-large .flag){width:33px;height:22px}
+  }
+  @media(max-width:380px){
+    .language-choice :global(.languages-large){grid-template-columns:minmax(0,1fr);gap:12px}
+    .language-choice :global(.languages-large a:last-child){grid-column:auto;width:100%}
+  }
+</style>

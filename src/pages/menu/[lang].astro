@@ -13,17 +13,17 @@ export function getStaticPaths() { return languages.map(lang=>({params:{lang}}))
 const lang = Astro.params.lang as Language;
 const t = copy[lang];
 const orderText = orderCopy[lang];
-const seoTitle = {it:'Schiacciate a Firenze',en:'Schiacciate in Florence',de:'Schiacciate in Florenz',fr:'Schiacciate à Florence'}[lang];
+const seoTitle = {it:'Schiacciate a Firenze',en:'Schiacciate in Florence',de:'Schiacciate in Florenz',fr:'Schiacciate à Florence',es:'Schiacciate en Florencia',zh:'佛罗伦萨意式夹心扁面包',ja:'フィレンツェのスキアッチャータ'}[lang];
 const categories = catalogo
   .map(category => ({...category, products: category.products.filter(product => product.id !== 'schiacciata-solo-olio')}))
   .filter(category => category.products.length > 0);
-const schema = {'@context':'https://schema.org','@type':'Menu',name:t.title,inLanguage:lang,url:new URL(`/menu/${lang}/`,site.url),hasMenuSection:categories.map(c=>({'@type':'MenuSection',name:categoryNames[c.id][lang],hasMenuItem:c.products.map(p=>({'@type':'MenuItem',name:p.name,description:ingredientsFor(p.id,lang).map(i=>i.label).join(', '),image:new URL(p.image,site.url)}))}))};
+const schema = {'@context':'https://schema.org','@type':'Menu',name:t.title,inLanguage:lang==='zh'?'zh-Hans':lang,url:new URL(`/menu/${lang}/`,site.url),hasMenuSection:categories.map(c=>({'@type':'MenuSection',name:categoryNames[c.id][lang],hasMenuItem:c.products.map(p=>({'@type':'MenuItem',name:p.name,description:ingredientsFor(p.id,lang).map(i=>i.label).join(', '),image:new URL(p.image,site.url)}))}))};
 ---
 <MenuLayout lang={lang} title={`${seoTitle} | ELENA · Bottega dei Sapori Toscani`} description={t.seo} path={`/menu/${lang}/`}>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\u003c')}/>
   <a class="skip" href="#catalogo">{t.menu}</a>
   <header class="menu-header" id="top"><div class="shell header-row">
-    <a class="wordmark" href="/menu/">ELENA<span>Bottega dei Sapori Toscani</span></a>
+    <a class="wordmark" href="/menu/?choose=1">ELENA<span>Bottega dei Sapori Toscani</span></a>
     <MenuLanguages current={lang} label={t.language}/>
   </div></header>
   <main>

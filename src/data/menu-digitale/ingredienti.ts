@@ -1,3 +1,4 @@
+import {newIngredients} from './nuove-lingue';
 import type { Language } from './lingue';
 
 // Trascrizione dei soli ingredienti dichiarati nel catalogo approvato.
@@ -95,6 +96,7 @@ export const recipes: Record<string,string[]> = {
 };
 export function ingredientsFor(id: string, lang: Language) {
   if (!recipes[id]) throw new Error('Ingredienti mancanti: '+id);
+  if(lang==='es'||lang==='zh'||lang==='ja') return recipes[id].map(key=>({id:key,label:newIngredients[key][{es:0,zh:1,ja:2}[lang]]}));
   const index={it:0,en:1,de:2,fr:3}[lang];
   return recipes[id].map(key=>({id:key,label:labels[key][index]}));
 }
