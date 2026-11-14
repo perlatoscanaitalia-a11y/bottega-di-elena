@@ -1,26 +1,5 @@
 [
   {
-    "id": "pane",
-    "name": "Pane",
-    "products": [
-      {
-        "id": "schiacciata-solo-olio",
-        "name": "Schiacciata solo olio",
-        "image": "/images/menu-digitale/schiacciata-solo-olio.jpg",
-        "description": {
-          "it": "Schiacciata toscana fragrante, dorata e soffice all'interno, preparata con olio d'oliva e un pizzico di sale. Semplice, gustosa e perfetta da sola o da farcire.",
-          "en": "Golden Tuscan schiacciata with olive oil and a pinch of salt, soft inside. Enjoy on its own or filled.",
-          "de": "Goldbraune toskanische Schiacciata mit Olivenöl und einer Prise Salz, innen weich. Zum pur Genießen oder Belegen.",
-          "fr": "Schiacciata toscane dorée et moelleuse à l’intérieur, préparée avec de l’huile d’olive et une pincée de sel. À déguster nature ou garnie.",
-          "es": "Schiacciata toscana aromática y dorada, tierna por dentro, elaborada con aceite de oliva y una pizca de sal. Sencilla y sabrosa, para disfrutar sola o rellena.",
-          "zh": "托斯卡纳式扁面包，色泽金黄、香气诱人，内里柔软，以橄榄油和少许盐制作。简单美味，可单独品尝，也可夹入喜欢的馅料。",
-          "ja": "オリーブオイルとひとつまみの塩で作る、香ばしく黄金色に焼き上げたトスカーナのスキアッチャータ。中はふんわり。そのままでも、お好みの具を挟んでも楽しめます。"
-        },
-        "sourceImage": "https://glovo.dhmedia.io/image/menus-glovo/products/2b2afc6a389de7a29e2ca809724d27b9613d182249095049575c0ebfa474ac9b"
-      }
-    ]
-  },
-  {
     "id": "le-toscane",
     "name": "Le Toscane",
     "products": [
@@ -656,6 +635,27 @@
           "ja": "ツナ、アボカド、フレッシュトマト、フレッシュルッコラを、Forno Coverciano のオリーブオイルを使った手作りスキアッチャータで挟みました。"
         },
         "sourceImage": "https://glovo.dhmedia.io/image/global-menu-service/GV_IT/vendor/974762/product/4d2db2f3-0718-4994-8722-1525180a7098.jpg"
+      }
+    ]
+  },
+  {
+    "id": "pane",
+    "name": "Pane",
+    "products": [
+      {
+        "id": "schiacciata-solo-olio",
+        "name": "Schiacciata solo olio",
+        "image": "/images/menu-digitale/schiacciata-solo-olio.jpg",
+        "description": {
+          "it": "Schiacciata toscana fragrante, dorata e soffice all'interno, preparata con olio d'oliva e un pizzico di sale. Semplice, gustosa e perfetta da sola o da farcire. La nostra schiacciata toscana è preparata con ingredienti vegetali, senza strutto, latte, burro o uova. Fragrante, dorata e perfetta da farcire con le nostre specialità.",
+          "en": "Golden Tuscan schiacciata with olive oil and a pinch of salt, soft inside. Enjoy on its own or filled. Our Tuscan schiacciata is made with plant-based ingredients, without lard, milk, butter or eggs. Fragrant and golden, it is perfect for filling with our specialities.",
+          "de": "Goldbraune toskanische Schiacciata mit Olivenöl und einer Prise Salz, innen weich. Zum pur Genießen oder Belegen. Unsere toskanische Schiacciata wird mit rein pflanzlichen Zutaten hergestellt – ohne Schmalz, Milch, Butter oder Eier. Duftend und goldbraun gebacken, lässt sie sich wunderbar mit unseren Spezialitäten belegen.",
+          "fr": "Schiacciata toscane dorée et moelleuse à l’intérieur, préparée avec de l’huile d’olive et une pincée de sel. À déguster nature ou garnie. Notre schiacciata toscane est préparée avec des ingrédients végétaux, sans saindoux, lait, beurre ni œufs. Parfumée et dorée, elle est parfaite à garnir de nos spécialités.",
+          "es": "Schiacciata toscana aromática y dorada, tierna por dentro, elaborada con aceite de oliva y una pizca de sal. Sencilla y sabrosa, para disfrutar sola o rellena. Nuestra schiacciata toscana se elabora con ingredientes vegetales, sin manteca de cerdo, leche, mantequilla ni huevos. Aromática y dorada, es perfecta para rellenar con nuestras especialidades.",
+          "zh": "托斯卡纳式扁面包，色泽金黄、香气诱人，内里柔软，以橄榄油和少许盐制作。简单美味，可单独品尝，也可夹入喜欢的馅料。 我们的托斯卡纳式扁面包采用植物性食材制作，不含猪油、牛奶、黄油或鸡蛋。香气诱人、色泽金黄，非常适合夹入本店的特色美味。",
+          "ja": "オリーブオイルとひとつまみの塩で作る、香ばしく黄金色に焼き上げたトスカーナのスキアッチャータ。中はふんわり。そのままでも、お好みの具を挟んでも楽しめます。 当店のトスカーナ風スキアッチャータは植物性の材料で作り、ラード、牛乳、バター、卵は使用していません。香ばしく黄金色に焼き上げたパンは、当店自慢の食材を挟んで楽しむのにぴったりです。"
+        },
+        "sourceImage": "https://glovo.dhmedia.io/image/menus-glovo/products/2b2afc6a389de7a29e2ca809724d27b9613d182249095049575c0ebfa474ac9b"
       }
     ]
   }
