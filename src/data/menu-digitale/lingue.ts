@@ -24,3 +24,7 @@ const originalCategoryNames = {
 
 export const categoryNames = Object.fromEntries(Object.entries(originalCategoryNames).map(([key,value])=>[key,{...value,...newCategories[key]}])) as Record<string, Record<Language,string>>;
 export const languageTags: Record<Language,string> = {it:'it',en:'en',de:'de',fr:'fr',es:'es',zh:'zh-Hans',ja:'ja'};
+
+// Nomi descrittivi: le categorie non certificano ricette non verificate.
+categoryNames['le-vegetariane']={it:'Orto e formaggi',en:'Vegetables and cheese',de:'Gemüse und Käse',fr:'Légumes et fromages',es:'Verduras y quesos',zh:'蔬菜与奶酪',ja:'野菜とチーズ'};
+categoryNames['le-vegane']={it:'Dall’orto',en:'From the garden',de:'Aus dem Garten',fr:'Du potager',es:'De la huerta',zh:'田园蔬菜',ja:'畑の恵み'};

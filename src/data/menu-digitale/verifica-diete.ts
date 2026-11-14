@@ -7,14 +7,23 @@ export interface DietApproval { diet: Diet; status: 'verified'; evidence: string
 export const ingredientConfirmations = {
   pesto: {diet:'vegan', evidence:'Conferma del negozio, 12 novembre 2026: «pesto vegano».'},
   mozzarella: {status:'excluded', evidence:'Conferma del negozio, 12 novembre 2026: caglio animale. Non vegetariana e non vegana.'},
+  impasto: {diet:'vegan', evidence:'Conferma diretta del titolare, 14 novembre 2026: impasto della schiacciata salata Forno Coverciano esclusivamente vegetale.'},
+  verdure: {diet:'vegan', evidence:'Conferma diretta del titolare, 14 novembre 2026: melanzane e pomodori secchi preparati con soli ingredienti vegetali.'},
+  avocado: {diet:'vegan', evidence:'Conferma diretta del titolare, 14 novembre 2026: L’Avocado non contiene altri ingredienti animali.'},
+  formaggi: {status:'excluded', evidence:'Conferma diretta del titolare, 14 novembre 2026: stracciatella, caprino, mozzarella/fiordilatte e mozzarella di bufala utilizzati contengono caglio animale.'},
 };
 
 // Assegnazioni solo con conferma del negozio o schede effettive.
 // Le categorie Glovo non costituiscono una verifica degli ingredienti composti.
 export const dietApprovals: Record<string, DietApproval> = {
   'la-cecina': {diet:'vegan', status:'verified', evidence:['Conferma esplicita del titolare nel messaggio del 12 novembre 2026: «La Cecina è confermata VEGAN». Conferma riferita alla schiacciata completa.']},
+  'l-ortolana': {diet:'vegan', status:'verified', evidence:['Approvazione esplicita del titolare, 14 novembre 2026: bollino VEGAN per L’Ortolana; impasto, melanzane e pomodori secchi interamente vegetali.']},
+  'l-avocado': {diet:'vegan', status:'verified', evidence:['Approvazione esplicita del titolare, 14 novembre 2026: bollino VEGAN per L’Avocado; impasto e melanzane vegetali, nessun altro ingrediente animale.']},
+  'schiacciata-solo-olio': {diet:'vegan', status:'verified', evidence:['Approvazione esplicita del titolare, 14 novembre 2026: bollino VEGAN per Schiacciata solo olio; impasto della schiacciata salata esclusivamente vegetale.']},
 };
 export const dietExclusions: Record<string,string> = {
+  'la-stracciatella':'Stracciatella con caglio animale: conferma diretta del titolare, 14 novembre 2026.',
+  'la-caprina':'Caprino con caglio animale: conferma diretta del titolare, 14 novembre 2026.',
   'la-mediterranea':'Mozzarella: caglio animale confermato dal negozio.',
   'la-bufalina':'Mozzarella: caglio animale confermato dal negozio.',
   'la-ligure':'Mozzarella: caglio animale confermato dal negozio; il pesto vegano non rende vegetariana la ricetta completa.',

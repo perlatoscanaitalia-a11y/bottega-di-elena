@@ -1,8 +1,4 @@
-﻿---
+---
 import { site } from '../data/site';
 ---
-<aside class="elena-cta" aria-labelledby="elena-title">
-  <div><p class="eyebrow">In arrivo</p><h2 id="elena-title">{site.elena.label}</h2><p>Prodotti disponibili, lista della spesa e ritiro in negozio: in futuro troverai tutto nell’app PANIFICIO ELENA.</p></div>
-  {site.elena.enabled && site.elena.url ? <a class="button" href={site.elena.url}>Apri PANIFICIO ELENA</a> : <span class="button button-disabled" aria-disabled="true">Presto disponibile</span>}
-</aside>
-
+<aside class="elena-cta" aria-labelledby="elena-title"><div><p class="eyebrow">Dalla bottega, per te</p><h2 id="elena-title">Scegli il tuo prossimo pranzo</h2><p>Sfoglia il menù o chiamaci per conoscere le disponibilità del banco.</p></div><div class="hero-actions"><a class="button" href="/menu/">Apri il menù</a><a href={site.phoneHref}>Chiama la bottega</a></div></aside>

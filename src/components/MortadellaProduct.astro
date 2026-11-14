@@ -7,7 +7,7 @@ const quantity = p.sliced ? '100 g' : '1 schiacciata';
 const whatsapp = `https://wa.me/${site.phone.replace(/\D/g, '')}?text=${encodeURIComponent(`Buongiorno, vorrei ordinare e ritirare in negozio: ${p.name}, ${quantity}. Potete confermare prezzo, disponibilità e orario di ritiro?`)}`;
 ---
 <article class:list={['mort-product', { 'mort-product-unavailable': !p.available }]} id={p.id} data-product={p.name}>
-  {p.image && <figure class="mort-product-image"><img src={p.image} alt={p.alt} width="800" height="800" loading="lazy" decoding="async" />{p.aiGenerated && <figcaption>Immagine illustrativa generata con IA</figcaption>}</figure>}
+  {p.image && !p.aiGenerated && <figure class="mort-product-image"><img src={p.image} alt={p.alt} width="800" height="800" loading="lazy" decoding="async" />{p.aiGenerated && <figcaption>Immagine illustrativa generata con IA</figcaption>}</figure>}
   <div class="mort-product-copy">
     <p class="eyebrow">{p.label}</p><h3>{p.name}</h3>
     {p.id === 'favola' && <p><strong>Carne selezionata · Miele · Sale Dolce di Cervia</strong><br /><span lang="en">Selected pork · Honey · Sale Dolce di Cervia sea salt</span></p>}

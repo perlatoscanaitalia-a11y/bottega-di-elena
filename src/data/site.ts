@@ -31,6 +31,7 @@
   elena: { enabled: false, url: '', label: 'Fai la spesa con PANIFICIO ELENA' },
   nav: [
     { href: '/', label: 'Home' },
+    { href: '/menu/', label: 'Menù' },
     { href: '/prodotti/', label: 'Prodotti' },
     { href: '/schiacciate-panini-firenze/', label: 'Schiacciate' },
     { href: '/mortadella-firenze/', label: 'Mortadella' },
@@ -57,7 +58,7 @@ export const products = {
   formaggi: ['Pecorino di Seggiano semistagionato', 'Pecorino stagionato in grotta di Seggiano', 'Ricotta di pecora di Seggiano', 'Belgamino di bufala', 'Treccia di bufala di Battipaglia', 'Mozzarella di bufala di Battipaglia', 'Mozzarella di bufala di Caserta, dal gusto più saporito', 'Vetta di Monviso — FitMilk', 'Latte FitMilk', 'Yogurt', 'Stracciatella', 'Stracchino cremoso', 'Burro chiarificato', 'Parmigiano', 'Gorgonzola', 'Gorgonzola al tartufo', 'Tomino piemontese'],
   dolci: ['Occhio di bue', 'Quadrocino albicocca e uvetta', 'Torciglioni di pasta sfoglia con albicocca e uvetta', 'Crostatine', 'Ciambellone', 'Pasticceria secca', 'Pasticceria secca vegana', 'Torta della nonna', 'Budino di riso', 'Pan di ramerino', 'Cantucci alle mandorle'],
   viniSfusi: ['Traminer', 'Ribolla Gialla'],
-  vini: ['Bianco Maremma — Cantine Terredagoli', 'Bolgheri — Cantine Terredagoli', 'Rosato — Cantine Terredagoli', 'Vino rosso toscano — denominazione da confermare'],
+  vini: ['Bianco Maremma — Cantine Terredagoli', 'Bolgheri — Cantine Terredagoli', 'Rosato — Cantine Terredagoli', 'Vino rosso toscano'],
 };
 
 export const selectedSpecialties = [

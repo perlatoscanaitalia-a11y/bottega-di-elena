@@ -14,9 +14,7 @@ const lang = Astro.params.lang as Language;
 const t = copy[lang];
 const orderText = orderCopy[lang];
 const seoTitle = {it:'Schiacciate a Firenze',en:'Schiacciate in Florence',de:'Schiacciate in Florenz',fr:'Schiacciate à Florence',es:'Schiacciate en Florencia',zh:'佛罗伦萨意式夹心扁面包',ja:'フィレンツェのスキアッチャータ'}[lang];
-const categories = catalogo
-  .map(category => ({...category, products: category.products.filter(product => product.id !== 'schiacciata-solo-olio')}))
-  .filter(category => category.products.length > 0);
+const categories = catalogo;
 const schema = {'@context':'https://schema.org','@type':'Menu',name:t.title,inLanguage:lang==='zh'?'zh-Hans':lang,url:new URL(`/menu/${lang}/`,site.url),hasMenuSection:categories.map(c=>({'@type':'MenuSection',name:categoryNames[c.id][lang],hasMenuItem:c.products.map(p=>({'@type':'MenuItem',name:p.name,description:ingredientsFor(p.id,lang).map(i=>i.label).join(', '),image:new URL(p.image,site.url)}))}))};
 ---
 <MenuLayout lang={lang} title={`${seoTitle} | ELENA · Bottega dei Sapori Toscani`} description={t.seo} path={`/menu/${lang}/`}>
@@ -45,9 +43,9 @@ const schema = {'@context':'https://schema.org','@type':'Menu',name:t.title,inLa
         <div class="product-grid">{category.products.map((product,i)=><article class="menu-product" id={product.id}>
           <h3 class="product-title">{product.name} {verifiedDietFor(product.id) && <MenuDietBadge diet={verifiedDietFor(product.id)!} lang={lang}/>}</h3>
           <div class="product-photo">
-            <img src={product.image} alt={product.name} width="1000" height="750" loading={index===0&&i<2?'eager':'lazy'} fetchpriority={index===0&&i===0?'high':'auto'} decoding="async"/>
+            <img src={product.image.replace(/\.[^.]+$/, '-optimized.webp')} alt={product.name} width="1000" height="750" loading={index===0&&i<2?'eager':'lazy'} fetchpriority={index===0&&i===0?'high':'auto'} decoding="async"/>
           </div>
-          <div class="product-copy"><p class="ingredient-label">{t.ingredients}</p><ul class="ingredients-list">{ingredientsFor(product.id,lang).map(ingredient=><li>{ingredient.label}</li>)}</ul></div>
+          <div class="product-copy"><p class="product-description">{product.description[lang]}</p><p class="ingredient-label">{t.ingredients}</p><ul class="ingredients-list">{ingredientsFor(product.id,lang).map(ingredient=><li>{ingredient.label}</li>)}</ul></div>
           <MenuOrder product={product} lang={lang} ingredients={ingredientsFor(product.id,lang)}/>
         </article>)}</div>
       </section>)}
