@@ -15,7 +15,7 @@ const t = copy[lang];
 const orderText = orderCopy[lang];
 const seoTitle = {it:'Schiacciate a Firenze',en:'Schiacciate in Florence',de:'Schiacciate in Florenz',fr:'Schiacciate à Florence',es:'Schiacciate en Florencia',zh:'佛罗伦萨意式夹心扁面包',ja:'フィレンツェのスキアッチャータ'}[lang];
 const categories = catalogo;
-const schema = {'@context':'https://schema.org','@type':'Menu',name:t.title,inLanguage:lang==='zh'?'zh-Hans':lang,url:new URL(`/menu/${lang}/`,site.url),hasMenuSection:categories.map(c=>({'@type':'MenuSection',name:categoryNames[c.id][lang],hasMenuItem:c.products.map(p=>({'@type':'MenuItem',name:p.name,description:ingredientsFor(p.id,lang).map(i=>i.label).join(', '),image:new URL(p.image,site.url)}))}))};
+const schema = {'@context':'https://schema.org','@type':'Menu','@id':site.url+`/menu/${lang}/#menu`,mainEntityOfPage:site.url+`/menu/${lang}/`,name:t.title,inLanguage:lang==='zh'?'zh-Hans':lang,url:new URL(`/menu/${lang}/`,site.url),hasMenuSection:categories.map(c=>({'@type':'MenuSection',name:categoryNames[c.id][lang],hasMenuItem:c.products.map(p=>({'@type':'MenuItem','@id':site.url+`/menu/${lang}/#${p.id}`,url:site.url+`/menu/${lang}/#${p.id}`,name:p.name,description:ingredientsFor(p.id,lang).map(i=>i.label).join(', '),image:new URL(p.image,site.url)}))}))};
 ---
 <MenuLayout lang={lang} title={`${seoTitle} | ELENA · Bottega dei Sapori Toscani`} description={t.seo} path={`/menu/${lang}/`}>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\u003c')}/>
