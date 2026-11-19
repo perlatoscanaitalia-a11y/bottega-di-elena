@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site } from '../../data/site';
+// Primo rilascio autorizzato dal titolare il 18 novembre 2026.
+const datePublished = '2026-11-19';
+const dateModified = '2026-11-19';
+const path = '/blog/blu-61-formaggio-carpenedo-firenze/';
+const title = 'Blu ’61 Carpenedo: storia e abbinamenti | ELENA a Firenze';
+const headline = 'Blu ’61: il formaggio nato da una storia d’amore';
+const description = 'Blu ’61 Carpenedo: storia, latte, Raboso Passito, cranberries e abbinamenti. A Firenze chiedi informazioni e disponibilità a ELENA, in Via Masaccio 16 Rosso/B.';
+const canonical = new URL(path, site.url).href;
+const image = '/images/blu61/blu61-carpenedo-principale-1600.webp';
+const imageAlt = 'Blu ’61 Carpenedo aperto, con pasta erborinata, crosta ricoperta di cranberries e forma confezionata';
+const heroSrcset = [480, 800, 1200, 1600].map(width => `/images/blu61/blu61-carpenedo-principale-${width}.webp ${width}w`).join(', ');
+const bodySrcset = [480, 800, 1200].map(width => `/images/blu61/blu61-carpenedo-forme-${width}.webp ${width}w`).join(', ');
+const businessHours = [
+ { label: 'Lunedì–venerdì', display: '8:00–13:30 e 17:00–19:30', days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], ranges: [{ opens: '08:00', closes: '13:30' }, { opens: '17:00', closes: '19:30' }] },
+ { label: 'Sabato', display: '9:00–13:30', days: ['Saturday'], ranges: [{ opens: '09:00', closes: '13:30' }] },
+ { label: 'Domenica', display: 'Chiuso', days: ['Sunday'], ranges: [] },
+];
+const localOpeningHours = businessHours.flatMap(entry => entry.ranges.map(range => ({ '@type': 'OpeningHoursSpecification', dayOfWeek: entry.days, opens: range.opens, closes: range.closes })));
+const sources = {
+ product: 'https://lacasearia.com/en/products/blue-cheeses/blu-61',
+ method: 'https://lacasearia.com/it/metodo-carpenedo',
+ company: 'https://lacasearia.com/it/azienda',
+ casoin: 'https://www.casoinonline.it/products/blu-61%C2%AE',
+ collection: 'https://www.casoinonline.it/en/collections/la-casearia',
+ sheet: 'https://www.iltagliere.it/immagini/articoli/1436/75f_Scheda%20Tecnica%20-%20Blu%2061.pdf'
+};
+const faqs = [
+ ['Che cos’è il Blu ’61?', 'È un formaggio erborinato della Casearia Carpenedo, affinato con vino Raboso Passito e cranberries in crosta. La sua identità unisce pasta morbida, venature blu e componente fruttata.'],
+ ['Che latte contiene?', 'Latte vaccino pastorizzato, come dichiara la scheda ufficiale del produttore. Contiene latte; per gli altri allergeni e le esigenze individuali bisogna controllare l’etichetta del prodotto effettivamente acquistato.'],
+ ['Perché si chiama Blu ’61?', 'Il nome richiama il 1961, anno delle nozze di Antonio Carpenedo e Giuseppina: il produttore racconta che Antonio dedicò il formaggio alla moglie nel 2011, per i cinquant’anni di matrimonio.'],
+ ['Che sapore ha?', 'Ha carattere erborinato e una componente vinosa e fruttata. La dolcezza dell’affinamento accompagna la sapidità; i cranberries aggiungono un contrasto acidulo. L’intensità può variare con maturazione e temperatura di servizio.'],
+ ['Cosa sono i cranberries?', 'Sono bacche comunemente chiamate mirtilli rossi americani. Nel Blu ’61 sono presenti sulla crosta in forma essiccata. Non sono il mirtillo blu e non indicano una confettura aggiunta alla pasta.'],
+ ['Come si conserva il Blu ’61?', 'In frigorifero, seguendo l’etichetta del pezzo acquistato. Casoin indica +2/+4 °C. Dopo il taglio richiedi al banco le indicazioni per confezione e consumo: la durata del prodotto integro non vale automaticamente per una porzione aperta.'],
+ ['Come abbinarlo?', 'I passiti sono indicati nella scheda Casoin. Come proposte editoriali, prova pane poco salato, pera, poche noci oppure una piccola quantità di miele delicato o confettura. Assaggialo prima da solo.'],
+ ['Dove chiedere informazioni a Firenze?', 'Il Blu ’61 è attualmente disponibile presso PANIFICIO ELENA – Bottega dei Sapori Toscani, Via Masaccio 16 Rosso/B, Firenze. Vieni a scoprirlo in bottega oppure telefona al +39 327 003 4324 per informazioni sui formati e consigli di degustazione.']
+];
+const article = {
+ '@context':'https://schema.org', '@type':'BlogPosting', '@id':canonical+'#articolo',
+ headline, description, inLanguage:'it-IT', dateModified,
+ ...(datePublished ? {datePublished} : {}),
+ image:{'@type':'ImageObject',url:new URL(image,site.url).href,width:1600,height:1070,caption:imageAlt,creditText:'La Casearia Carpenedo'},
+ author:{'@type':'Organization',name:'Redazione ELENA – Bottega dei Sapori Toscani',url:site.url+'/storia/'},
+ publisher:{'@type':'Organization',name:site.name,url:site.url},
+ mainEntityOfPage:{'@type':'WebPage','@id':canonical},
+ about:{'@type':'Thing',name:'Blu ’61® della Casearia Carpenedo',url:sources.product},
+ mentions:{'@type':'GroceryStore','@id':site.url+'/#attivita',name:site.name,url:site.url+'/dove-siamo/',hasMap:site.mapsUrl,telephone:site.phone,address:{'@type':'PostalAddress',streetAddress:site.address.street,addressLocality:'Firenze',postalCode:'50132',addressCountry:'IT'},openingHoursSpecification:localOpeningHours},
+ citation:Object.values(sources)
+};
+---
+<BaseLayout {title} {description} {path} {image} {imageAlt} {businessHours} imageWidth={1600} imageHeight={1070} ogType="article" structuredData={[article]}>
+ <nav class="breadcrumb shell" aria-label="Percorso di navigazione"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Blu ’61</span></nav>
+ <article>
+  <header class="article-hero shell">
+   <p class="eyebrow">Storie di affinamento · Il banco di ELENA</p>
+   <h1>{headline}</h1>
+   <figure class="blu-photo blu-photo-hero">
+    <img src={image} srcset={heroSrcset} sizes="(min-width: 1082px) 1050px, calc(100vw - 2rem)" width="1600" height="1070" alt={imageAlt} loading="eager" fetchpriority="high" decoding="async" />
+    <figcaption>Blu ’61®: la forma aperta e i cranberries in crosta. Foto: La Casearia Carpenedo.</figcaption>
+   </figure>
+   <p class="lead"><strong>Il Blu ’61® è un formaggio erborinato di latte vaccino pastorizzato della Casearia Carpenedo, affinato con Raboso Passito e cranberries in crosta.</strong> Nasce nell’esperienza veneta dell’affinamento e unisce una pasta morbida al carattere del vino e della frutta.</p>
+   <p class="article-meta">Redazione ELENA – Bottega dei Sapori Toscani · {datePublished ? 'Pubblicato il '+datePublished : 'Bozza editoriale, non pubblicata'} · Revisione <time datetime={dateModified}>19 novembre 2026</time></p>
+  </header>
+  <div class="article-body shell">
+   <p>Ci sono formaggi che invitano a cominciare dal coltello e altri che chiedono anche un racconto. Il Blu ’61 appartiene a entrambe le categorie: incuriosisce per il contrasto tra superficie scura e interno chiaro, poi offre una storia familiare che aiuta a comprenderne il nome. Per avvicinarlo non serve cercare un gusto estremo: è più interessante seguire come cambiano i rapporti tra pasta, erborinatura e rivestimento.</p>
+   <p>Questa guida distingue le informazioni dichiarate nelle schede dalle nostre proposte di degustazione. Per chi cerca il <strong>Blu ’61 a Firenze</strong>, raccoglie inoltre i riferimenti di ELENA, dove il formaggio è attualmente disponibile al banco.</p>
+   <nav class="reading-guide" aria-label="Indice dell’articolo"><strong>In questa guida</strong><a href="#storia">La storia d’amore</a><a href="#affinamento">L’arte dell’affinamento</a><a href="#ingredienti">Latte, crosta e allergeni</a><a href="#degustazione">Degustazione e abbinamenti</a><a href="#firenze">Informazioni a Firenze</a><a href="#faq">Domande frequenti</a></nav>
+
+   <h2 id="storia">Antonio e Giuseppina: una dedica per le nozze d’oro</h2>
+   <p>La storia non è una leggenda costruita attorno al nome. Nella pagina sul <a href={sources.method}>Metodo Carpenedo</a>, l’azienda racconta che nel 2011 Antonio dedicò il Blu ’61 alla moglie Giuseppina in occasione delle nozze d’oro. La <a href={sources.product}>scheda ufficiale del formaggio</a> ribadisce l’ispirazione dei cinquant’anni di matrimonio. Il riferimento al 1961 si comprende dunque come richiamo all’anno delle nozze, ricavato da questa cronologia.</p>
+   <p>È un’origine che suggerisce una lettura gastronomica, senza trasformarla in una prova tecnica: elementi diversi possono trovare un equilibrio mantenendo ciascuno la propria voce. Nel piatto, questa idea diventa un invito ad assaggiare con attenzione. Prima la pasta, poi una porzione con la superficie affinata e infine il piccolo contrasto del frutto: tre prospettive sullo stesso formaggio.</p>
+
+   <h2 id="riconoscimenti">I riconoscimenti del Blu ’61</h2>
+   <p>La <a href={sources.product}>scheda ufficiale Carpenedo</a> documenta un percorso di riconoscimenti iniziato con il primo posto ad ALMA CASEUS nel 2012. A Infiniti Blu sono seguiti il Diploma di Eccellenza nel 2013, il Diploma di Qualità nel 2015 e quello di Qualità Superiore nel 2016. Il produttore riporta inoltre quattro medaglie di bronzo ai World Cheese Awards, nelle edizioni 2014, 2017, 2021 e 2022.</p>
+   <p>Tra gli altri riconoscimenti indicati nella stessa scheda figurano il Platino al Merano Wine Festival 2021, il Coup de Cœur al Salon du Fromage 2022, il Gold Award agli International Cheese &amp; Dairy Awards 2022 e l’inclusione in Gambero Rosso Top Italian Food 2023. Sono tappe del percorso del formaggio, da leggere accanto alla sua storia e al lavoro di affinamento.</p>
+
+   <h2 id="affinamento">La Casearia Carpenedo e l’arte di affinare</h2>
+   <p>La Casearia Carpenedo ha sede a Camalò di Povegliano, in provincia di Treviso. È il contesto veneto del prodotto: Firenze è invece la città della nostra bottega. Tenere distinte queste due geografie permette di raccontare una selezione gastronomica senza attribuire al formaggio un’origine toscana.</p>
+   <p>Affinare significa accompagnare l’evoluzione di una forma attraverso condizioni e ingredienti scelti. Carpenedo riassume il proprio metodo nell’acronimo TUTA: tempo, umidità, temperatura e ambiente. Nella descrizione aziendale, il lavoro parte anche dalla selezione di formaggi realizzati da caseifici, da mettere in relazione con vini e altre materie prime. Non coincide quindi con il semplice gesto di aggiungere un condimento al momento di servire.</p>
+   <p>Per il lettore, la distinzione è utile: nel Blu ’61 l’incontro con il Raboso Passito appartiene all’identità dell’affinamento. Un cucchiaio di miele aggiunto sul piatto è invece una scelta personale di accompagnamento. Sono due passaggi diversi, da valutare separatamente durante l’assaggio.</p>
+
+   <h2 id="ingredienti">Latte, erborinatura, Raboso Passito e cranberries</h2>
+   <p>La scheda del produttore dichiara <strong>latte vaccino pastorizzato e stagionatura minima di due mesi</strong>. Le venature blu e verdi visibili nella pasta sono il tratto dell’erborinatura. Non sono erbe aggiunte e non rendono il formaggio automaticamente uguale a ogni altro “blu”: consistenza, affinamento e maturazione contribuiscono alla sua espressione.</p>
+   <p>Il Raboso Passito accompagna la superficie insieme ai cranberries. Questi ultimi sono bacche comunemente chiamate mirtilli rossi americani, diverse dal mirtillo blu; qui sono impiegate essiccate. Per ingredienti e conservazione rimandiamo alla <a href={sources.casoin}>scheda Blu ’61 di Casoin</a>, consultata insieme alla <a href={sources.collection}>collezione dedicata alla Casearia</a>.</p>
+   <figure class="blu-photo blu-photo-body">
+    <img src="/images/blu61/blu61-carpenedo-forme-1200.webp" srcset={bodySrcset} sizes="(min-width: 832px) 800px, calc(100vw - 2rem)" width="1200" height="448" alt="Porzione di Blu ’61 con venature blu e cranberries, accanto alla forma incartata e alla confezione" loading="lazy" decoding="async" />
+    <figcaption>Pasta erborinata e presentazioni del Blu ’61®. Foto: La Casearia Carpenedo.</figcaption>
+   </figure>
+   <h3>La crosta si mangia? E quali allergeni considerare?</h3>
+   <p>La <a href={sources.sheet}>scheda tecnica pubblicata da Il Tagliere</a> descrive la crosta come edibile e riporta, fra gli allergeni, <strong>latte, compreso il lattosio, e solfiti</strong>. È un documento datato 27 aprile 2021: resta una fonte utile, ma non sostituisce la verifica della confezione attuale. La presentazione Casoin non esplicita i solfiti nello stesso modo.</p>
+   <p>Per questo non proponiamo una dichiarazione di assenza di solfiti. Chiedi di vedere etichetta e scheda aggiornata del lotto venduto, soprattutto se hai esigenze legate agli allergeni. Il caglio compare negli ingredienti senza che ne sia precisata qui l’origine: non definiamo quindi il Blu ’61 vegetariano. Anche l’eventuale consumo della crosta va riferito al prodotto e alle istruzioni effettivamente consegnati.</p>
+
+   <h2>Che sapore ha: leggere l’equilibrio senza esagerazioni</h2>
+   <p>La superficie vinaccia e il rosso dei frutti anticipano un interno chiaro attraversato da venature. La descrizione sensoriale Casoin richiama morbidezza, frutta passita e note vinose. Sono indicazioni per orientare l’assaggio, non aromi che ogni persona deve necessariamente riconoscere con la stessa intensità.</p>
+   <p>Un percorso utile è osservare separatamente consistenza e gusto: quanto cede la pasta al taglio? Come si distribuisce in bocca? La componente erborinata resta più evidente della frutta, oppure trova un contrappunto dolce e acidulo? È più preciso parlare di equilibrio che promettere un formaggio sempre dolcissimo, mai piccante o identico da una porzione all’altra.</p>
+   <h3>Cosa cambia rispetto agli erborinati più comuni?</h3>
+   <p>La differenza riconoscibile è l’affinamento con Raboso Passito e cranberries, non una superiorità assoluta. “Erborinato” comprende formaggi molto diversi: non basta il colore delle venature per stabilire quanto saranno intensi, salati o cremosi. Non presentiamo il Blu ’61 come una variante di Gorgonzola o Roquefort e non gli attribuiamo denominazioni che appartengono ad altri prodotti.</p>
+   <p>Per confrontarlo con un altro blu, usa pane neutro e assaggi piccoli, lasciando gli accompagnamenti per un secondo momento. Potrai distinguere meglio ciò che viene dalla pasta da ciò che suggerisce la superficie affinata, evitando che miele o confettura coprano fin dall’inizio le differenze.</p>
+
+   <h2 id="degustazione">Come degustarlo e servirlo</h2>
+   <p>Come proposta editoriale, prepara una quantità contenuta e lascia che perda gradualmente il freddo più intenso del frigorifero prima dell’assaggio. Evita tempi rigidi: una cucina estiva e una stanza fresca richiedono attenzione diversa. Tieni al fresco il resto e segui sempre le indicazioni del banco e della confezione.</p>
+   <p>Usa un coltello pulito e servi porzioni che consentano, se la crosta è confermata edibile, di confrontare interno e superficie. In un percorso di formaggi, proponilo dopo assaggi più delicati e prima di eventuali sapori particolarmente invadenti. È una sequenza di servizio suggerita, da adattare al tagliere e alle preferenze degli ospiti.</p>
+   <h3>Passiti: da dove cominciare con il vino</h3>
+   <p>La scheda Casoin indica i vini passiti. Per scegliere concretamente, il nostro suggerimento è cercare un vino con dolcezza e freschezza capaci di accompagnare il formaggio, versandone poco e confrontando un boccone prima e dopo il sorso. Il Raboso usato nell’affinamento non impone che nel bicchiere ci sia necessariamente lo stesso vino.</p>
+   <p>Un Vin Santo toscano può essere una prova editoriale interessante per una tavola fiorentina, scegliendo una versione coerente con l’abbinamento: i vini di questa famiglia non hanno tutti lo stesso profilo. Non è una raccomandazione attribuita al produttore, né un’affermazione sulla disponibilità di bottiglie specifiche in negozio.</p>
+   <h3>Pane, miele, confetture e frutta</h3>
+   <p>Per il pane, partirei da una fetta poco salata e dal gusto semplice: aiuta a leggere il formaggio senza aggiungere subito altri aromi. Il <a href="/pane-forno-coverciano/">pane del Forno Coverciano</a> offre il contesto della nostra tradizione di bottega; la scelta del formato va fatta sull’assortimento del giorno. Una tostatura leggera può aggiungere contrasto alla pasta morbida.</p>
+   <p>Miele delicato e confettura di pera o fichi sono altre proposte della redazione: bastano quantità piccole, servite a parte. La superficie porta già una componente fruttata, perciò aggiungere dolcezza non è obbligatorio. Anche pera fresca o qualche noce possono costruire un contrasto di consistenza; considera gli allergeni degli accompagnamenti oltre a quelli del formaggio.</p>
+   <p>Se lo utilizzi in cucina, prova prima una piccola quantità su un crostino caldo o in una preparazione semplice, assaggiando prima di aggiungere sale. Questa è un’idea editoriale per dosarne l’intensità: non implica che riscaldarlo migliori sempre l’esperienza rispetto alla degustazione in purezza.</p>
+
+   <h2>Come conservarlo dopo l’acquisto</h2>
+   <p>Casoin riporta la conservazione a +2/+4 °C; fai comunque riferimento all’etichetta del pezzo acquistato. Dopo il taglio, conserva la porzione nella confezione adatta indicata dal banco e proteggila dal contatto con altri alimenti. Preleva soltanto ciò che intendi servire, usando utensili puliti.</p>
+   <p>Non ricavare la durata dopo l’apertura dalla vita commerciale di una forma integra. Chiedi quando consumare la porzione e come richiuderla, annotando la data del taglio se utile. Le venature caratteristiche dell’erborinatura non sono un criterio sufficiente per valutare qualsiasi cambiamento successivo: in caso di alterazioni inattese, chiedi indicazioni prima di consumare.</p>
+
+   <h2 id="firenze">Dove trovare il Blu ’61 a Firenze</h2>
+   <p>Il Blu ’61 è attualmente disponibile presso <strong>ELENA – Bottega dei Sapori Toscani, Via Masaccio 16 Rosso/B</strong>, nella zona di Campo di Marte a Firenze. La nostra pagina <a href="/salumi-e-formaggi/">salumi e formaggi</a> racconta la selezione del banco.</p>
+   <address><strong>PANIFICIO ELENA – Bottega dei Sapori Toscani</strong><br />Via Masaccio 16 Rosso/B, 50132 Firenze<br />Riferimento: altezza Via Masaccio 184 nero<br /><a href={site.phoneHref}>+39 327 003 4324</a> · <a href={site.emailHref}>{site.email}</a></address>
+   <p>Per conoscere i formati disponibili puoi chiedere direttamente in bottega o contattarci prima della visita. Per allergeni e conservazione richiedi la scheda del prodotto effettivamente proposto. Trovi mappa, contatti e orari nella pagina <a href="/dove-siamo/">Dove siamo</a>: è il riferimento da consultare per organizzare la visita.</p>
+
+   <section id="faq" aria-labelledby="faq-title"><h2 id="faq-title">Domande frequenti sul Blu ’61</h2>{faqs.map(([question,answer])=><div class="answer"><h3>{question}</h3><p>{answer}</p></div>)}</section>
+
+   <h2>Una storia da portare a tavola, un assaggio da scegliere</h2>
+   <p>Il Blu ’61 invita a conoscere un lavoro di affinamento e una dedica familiare attraverso il gusto. Per apprezzarlo basta un primo assaggio essenziale, lasciando a vino e accompagnamenti il compito di aprire nuove possibilità. Se passi da Firenze, vieni a conoscere il banco di ELENA: il Blu ’61 ti aspetta in bottega, dove possiamo aiutarti a scegliere il formato e gli abbinamenti.</p>
+   <div class="final-cta"><p class="eyebrow">Ti aspettiamo in Via Masaccio</p><h3>Chiedi del Blu ’61 a ELENA</h3><p>Il Blu ’61 è disponibile: scopri i formati e chiedi un consiglio per l’assaggio.</p><div class="contact-actions"><a class="button" href={site.phoneHref}>Chiama la bottega</a><a class="text-link" href="/dove-siamo/">Indirizzo e contatti</a></div></div>
+   <aside class="source-note" aria-label="Fonti editoriali"><h2>Fonti e verifica</h2><p>Fonti consultate il 18 novembre 2026: <a href={sources.product}>Blu ’61, scheda ufficiale Carpenedo</a>; <a href={sources.method}>Metodo Carpenedo e dedica</a>; <a href={sources.company}>l’azienda</a>; <a href={sources.collection}>collezione Casoin</a>; <a href={sources.casoin}>scheda prodotto Casoin</a>; <a href={sources.sheet}>scheda tecnica Il Tagliere del 27 aprile 2021</a>. Suggerimenti di servizio e abbinamenti della redazione sono indicati come tali. Per il prodotto acquistato prevalgono etichetta e documentazione aggiornata.</p></aside>
+   <section class="purchase-section" id="acquistare-blu61-firenze" aria-labelledby="purchase-title">
+    <p class="eyebrow">Un assaggio da scoprire in bottega</p>
+    <h2 id="purchase-title">Dove acquistare il Blu ’61 a Firenze</h2>
+    <p>Il <strong>Blu ’61 della Casearia Carpenedo è disponibile presso PANIFICIO ELENA – Bottega dei Sapori Toscani</strong>, in Via Masaccio 16 Rosso/B, 50132 Firenze. Se cerchi dove comprare il Blu ’61 a Firenze, ti aspettiamo in bottega per conoscere questo erborinato e scegliere come portarlo a tavola.</p>
+    <p>Tra i formaggi particolari da scoprire a Firenze, il suo incontro con Raboso Passito e cranberries offre un’occasione per avvicinarsi all’arte dell’affinamento. Vieni a trovarci: al banco potrai chiedere informazioni sul formaggio e trovare un accompagnamento adatto al tuo assaggio.</p>
+    <address><strong>PANIFICIO ELENA – Bottega dei Sapori Toscani</strong><br />Via Masaccio 16 Rosso/B<br />50132 Firenze</address>
+    <h3>Orari della bottega</h3>
+    <dl class="purchase-hours">{businessHours.map(entry => <div><dt>{entry.label}</dt><dd>{entry.display}</dd></div>)}</dl>
+    <div class="contact-actions"><a class="button" href={site.mapsUrl}>Raggiungi la bottega su Google Maps</a><a class="text-link" href={site.phoneHref}>Chiama ELENA</a></div>
+   </section>
+  </div>
+ </article>
+</BaseLayout>
+<style>
+ .purchase-section{margin-top:3rem;padding:clamp(1.25rem,4vw,2.5rem);background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);scroll-margin-top:110px}.purchase-section h2{margin-top:0}.purchase-section h3{margin-top:2rem}.purchase-section address{padding:0;border:0;background:none}.purchase-hours{margin:0 0 2rem}.purchase-hours>div{padding:.85rem 0;border-bottom:1px solid var(--line)}.purchase-hours dt{font-weight:700}.purchase-hours dd{margin:.25rem 0 0}.purchase-section .button{text-align:center}.purchase-section .contact-actions{gap:1.25rem}
+ .blu-photo{margin:2rem 0 2.5rem}.blu-photo img{display:block;width:100%;height:auto;border-radius:var(--radius);background:#fff}.blu-photo figcaption{margin-top:.65rem;font-size:.85rem;line-height:1.5;color:var(--muted)}.blu-photo-hero{margin-top:2rem}.blu-photo-body{margin-block:2rem}
+ .article-hero{max-width:1050px}.article-hero h1{font-size:clamp(2.3rem,5.5vw,4.7rem);max-width:21ch;line-height:1.08;text-wrap:balance}.article-body{max-width:800px}.article-body h2{font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.14;scroll-margin-top:110px}.article-body h3{line-height:1.25}.reading-guide{display:grid;gap:.65rem;padding:1.5rem;background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);margin:2.5rem 0}.reading-guide a{width:fit-content;padding:.2rem 0}.answer{padding:1rem 0;border-bottom:1px solid var(--line)}.answer h3{font-size:1.35rem;margin:0 0 .7rem}.answer p{margin:0}.final-cta{background:var(--cream);padding:clamp(1.3rem,4vw,2.5rem);border-radius:var(--radius);margin-top:2.5rem}.final-cta h3{margin-top:0}.source-note{font-size:.9rem;color:var(--muted);margin-top:3rem}.source-note h2{font-size:1.5rem;margin-top:0}address{overflow-wrap:anywhere}a{overflow-wrap:anywhere}
+</style>

@@ -18,6 +18,7 @@ interface Props {
   ogType?: 'website' | 'article';
   robots?: string;
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
+  businessHours?: typeof site.hours;
 }
 const {
   title,
@@ -32,10 +33,11 @@ const {
   ogType = 'website',
   robots = 'index, follow, max-image-preview:large',
   structuredData = [],
+  businessHours = site.hours,
 } = Astro.props;
 const canonical = new URL(path, site.url).toString();
 const socialImage = image ? new URL(image, site.url).toString() : undefined;
-const openingHoursSpecification = site.hours.flatMap((entry) => entry.ranges.map((range) => ({ '@type': 'OpeningHoursSpecification', dayOfWeek: entry.days, opens: range.opens, closes: range.closes })));
+const openingHoursSpecification = businessHours.flatMap((entry) => entry.ranges.map((range) => ({ '@type': 'OpeningHoursSpecification', dayOfWeek: entry.days, opens: range.opens, closes: range.closes })));
 const schema = { '@context': 'https://schema.org', '@type': ['GroceryStore', 'Bakery'], '@id': site.url + '/#attivita', hasMenu: site.url + '/menu/', name: site.name, legalName: site.legalName, url: site.url, hasMap: site.mapsUrl, telephone: site.phone, email: site.email, description: 'Bottega alimentare a Firenze con pane del Forno Coverciano, gastronomia, salumi, formaggi, frutta e verdura di stagione e vini sfusi.', address: { '@type': 'PostalAddress', streetAddress: site.address.street, postalCode: site.address.postalCode, addressLocality: site.address.city, addressRegion: site.address.region, addressCountry: site.address.country }, openingHoursSpecification };
 const businessSchema = { ...schema, ...(businessImage ? { image: new URL(businessImage, site.url).toString() } : {}) };
 ---
@@ -75,7 +77,7 @@ const businessSchema = { ...schema, ...(businessImage ? { image: new URL(busines
     <a class="skip-link" href="#contenuto">Vai al contenuto</a>
     <Header />
     <main id="contenuto"><slot /></main>
-    <Footer><slot name="footer-note" /></Footer>
+    <Footer hours={businessHours}><slot name="footer-note" /></Footer>
     <CookiePreferences />
   </body>
 </html>
