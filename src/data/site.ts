@@ -33,6 +33,7 @@
     { href: '/', label: 'Home' },
     { href: '/menu/', label: 'Menù' },
     { href: '/prodotti/', label: 'Prodotti' },
+    { href: 'https://bottegadielena.it/blog/blu-61-formaggio-carpenedo-firenze/', label: 'Blog' },
     { href: '/schiacciate-panini-firenze/', label: 'Schiacciate' },
     { href: '/mortadella-firenze/', label: 'Mortadella' },
     { href: '/pane-forno-coverciano/', label: 'Il pane' },
